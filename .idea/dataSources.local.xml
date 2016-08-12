@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - opend_door_app@localhost" uuid="386bdb5b-af27-4c58-9bc6-351aef8deab7">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>opend_door_app.*</schema-pattern>
+      <default-schemas>opend_door_app.*</default-schemas>
+    </data-source>
+  </component>
+</project>

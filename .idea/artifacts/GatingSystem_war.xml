@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="GatingSystem:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="GatingSystem.war">
+      <element id="artifact" artifact-name="GatingSystem:war exploded" />
+    </root>
+  </artifact>
+</component>
