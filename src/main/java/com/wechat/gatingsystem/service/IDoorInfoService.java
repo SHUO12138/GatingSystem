@@ -14,7 +14,7 @@ public interface IDoorInfoService {
 
     void insertDoorInfo(DoorInfo doorInfo);
 
-    void delteDoorByName(String name);
+    void deleteDoorByName(String name);
 
     /*void updateDoorInfoByID(DoorInfo doorInfo);*/
 }

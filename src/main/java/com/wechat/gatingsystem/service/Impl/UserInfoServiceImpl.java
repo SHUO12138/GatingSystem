@@ -27,19 +27,14 @@ public class UserInfoServiceImpl implements IUserInfoService{
         List<UserInfo> userList = new ArrayList<UserInfo>();
 
         userList = userInfoDao.findAllUser();
-        for(int i = 0; i < userList.size(); i++){
-            System.out.println(userList.get(i).userName + "");
-        }
+
         return userList;
     }
 
     @Override
     public UserInfo findUserInfoByID(int userID) {
 
-        UserInfo userInfo = new UserInfo();
-        userInfo.setUserID(1);
-        userInfo.userID = userInfo.getUserID();
-
+        UserInfo userInfo;
         userInfo = userInfoDao.findUserInfoByID(userID);
         return userInfo;
     }
@@ -47,54 +42,14 @@ public class UserInfoServiceImpl implements IUserInfoService{
     @Override
     public void insertUserInfo(UserInfo userInfo) {
 
-        List<UserInfo> userList = new ArrayList<UserInfo>();
+        userInfoDao.insertUserInfo(userInfo);
 
-        //look whether the user exists
-        boolean flg = false;
-        userList = userInfoDao.findAllUser();
-        for(int i = 0; i < userList.size(); i++){
-            if(userList.get(i).userPhone.equals(userInfo.userPhone)){
-                flg = true;
-                break;
-            }
-        }
-        if(flg == false) {
-            userInfoDao.insertUserInfo(userInfo);
-            System.out.println("Insert successfully!!");
-        }
-        else{
-            System.out.println("This user already exists!");
-        }
     }
 
     @Override
     public void deleteUserInfoByPhone(String userPhone) {
 
-        List<UserInfo> userList = new ArrayList<UserInfo>();
-
-        UserInfo userInfo = new UserInfo();
-        userInfo.setUserPhone(userPhone);
-        userInfo.userPhone = userInfo.getUserPhone();
-
-        //look whether the user exists
-        //if flg == true.can we delete user
-        boolean flg = false;
-        userList.clear();
-        userList = userInfoDao.findAllUser();
-        for(int i = 0; i < userList.size(); i++){
-            if(userList.get(i).userPhone.equals(userInfo.userPhone)){
-                flg = true;
-                break;
-            }
-        }
-        if(flg) {
-            userInfoDao.deleteUserInfoByPhone(userPhone);
-            System.out.println("delete successfully!!");
-        }
-        else{
-            System.out.println("This user don't exist!");
-        }
-
+        userInfoDao.deleteUserInfoByPhone(userPhone);
     }
 
 

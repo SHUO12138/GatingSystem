@@ -17,15 +17,11 @@ public class OpenRecordServiceImpl implements IOpenRecordService{
     @Autowired
     private OpenRecordDAO openRecordDao;
 
-    private OpenRecord openDoorRecord;
-
     @Override
     public OpenRecord selectByRecordID(int recordID) {
 
-        openDoorRecord.setRelationID(recordID);
-        openDoorRecord.recordID = openDoorRecord.getRecordID();
-
-        openDoorRecord = openRecordDao.selectByRecordID(openDoorRecord.recordID);
+        OpenRecord openDoorRecord;
+        openDoorRecord = openRecordDao.selectByRecordID(recordID);
         return openDoorRecord;
     }
 

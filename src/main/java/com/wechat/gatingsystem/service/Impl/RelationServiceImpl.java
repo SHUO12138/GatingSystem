@@ -20,6 +20,14 @@ public class RelationServiceImpl implements IRelationService{
     @Override
     public Relation selectByRelationID(int relationID) {
 
+        Relation relation = relationDao.selectByRelationID(relationID);
+        System.out.println(relation.getDoorID());
+        return relation;
+    }
+
+/*    @Override
+    public Relation selectByRelationID(int relationID) {
+
         Relation relation = new Relation();
 
         relation.setRelationID(relationID);
@@ -29,5 +37,5 @@ public class RelationServiceImpl implements IRelationService{
 
         System.out.println(relation.doorID);
         return relation;
-    }
+    }*/
 }
