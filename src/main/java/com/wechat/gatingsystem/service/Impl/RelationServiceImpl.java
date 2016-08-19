@@ -6,6 +6,9 @@ import com.wechat.gatingsystem.service.IRelationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.HashMap;
+import java.util.List;
+
 /**
  * Created by never on 2016/8/11.
  *
@@ -25,17 +28,10 @@ public class RelationServiceImpl implements IRelationService{
         return relation;
     }
 
-/*    @Override
-    public Relation selectByRelationID(int relationID) {
+    @Override
+    public List<HashMap<Object, Object>> selectRecordByRelation(Integer doorId) {
 
-        Relation relation = new Relation();
-
-        relation.setRelationID(relationID);
-        relation.relationID = relation.getRelationID();
-        //judge
-        relation = relationDao.selectByRelationID(relation.relationID);
-
-        System.out.println(relation.doorID);
-        return relation;
-    }*/
+        List<HashMap<Object, Object>> listMap = relationDao.selectRecordByRelation(doorId);
+        return listMap;
+    }
 }

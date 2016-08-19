@@ -13,6 +13,7 @@ import java.util.Map;
 public class DoorInfoDaoTest extends BaseTest{
 	@Autowired
 	private DoorInfoDAO doorInfoDao;
+	
 
 	@Autowired
 	private RelationServiceImpl relationService;
@@ -27,6 +28,11 @@ public class DoorInfoDaoTest extends BaseTest{
 	@Test
 	public void testHello(){
 		relationService.selectByRelationID(1);
+	}
+
+	@Test
+	public void testDeleteByNme(){
+		doorInfoDao.deleteByDoorName("test");
 	}
 
 

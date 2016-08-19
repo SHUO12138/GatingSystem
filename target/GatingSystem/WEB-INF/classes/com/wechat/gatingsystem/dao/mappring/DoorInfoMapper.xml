@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!DOCTYPE mapper
-  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wechat.gatingsystem.dao.DoorInfoDAO">
 	<!-- mybatis 映射文件 相当于DAO的实现 每一个id相当于一个方法 -->
-	<select id="findAll" resultType="com.wechat.gatingsystem.po.DoorInfo">
+	<select id="findAll" resultType="doorInfo">
 		select * from door_info
 	</select>
 
@@ -17,7 +17,10 @@
 		insert into door_info(door_name, door_create_time ) values(#{doorName}, #{doorCreateTime})
 	</insert>
 
-	<delete id="deleteDoorByName" parameterType="String">
-		delete from door_info where door_name = #{doorName}
+	<delete id="deleteByDoorName" parameterType="java.lang.String" >
+		delete a, b, r
+		from door_info as a, relation as b, open_record as r
+		where b.door_id=a.door_id AND r.relation_id=b.relation_id AND a.door_name=#{doorName}
 	</delete>
+
 </mapper>

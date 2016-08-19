@@ -6,7 +6,6 @@
 <mapper namespace="com.wechat.gatingsystem.dao.OpenRecordDAO">
 	<!-- mybatis 映射文件 相当于DAO的实现 每一个id相当于一个方法 -->
 
-
 	<select id="selectByRecordID" parameterType="int" resultType="openRecord">
 		select * from  open_record where record_id = #{recordID}
 	</select>

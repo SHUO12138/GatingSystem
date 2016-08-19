@@ -43,10 +43,4 @@ public class DoorInfoServiceImpl implements IDoorInfoService {
 
     }
 
-    @Override
-    public void deleteDoorByName(String name) {
-
-        doorInfoDao.deleteDoorByName(name);
-    }
-
 }
