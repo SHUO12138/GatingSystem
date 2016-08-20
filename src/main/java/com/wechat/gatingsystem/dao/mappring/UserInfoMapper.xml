@@ -6,7 +6,7 @@
 <mapper namespace="com.wechat.gatingsystem.dao.UserInfoDAO">
 
 	<!-- mybatis 映射文件 相当于DAO的实现 每一个id相当于一个方法 -->
-	<select id="findAllUser"  resultType="userInfo">
+	<select id="findAllUser"  resultType="java.util.HashMap">
 		select * from user_info
 	</select>
 
@@ -22,5 +22,27 @@
 	<delete id="deleteUserInfoByPhone" parameterType="String">
 		delete from user_info where user_phone = #{userPhone}
 	</delete>
+
+	<resultMap id="result" type="java.util.HashMap">
+
+		<!--这里设置id属性，会影响输出-->
+		<!--<id column="user_phone" property="userPhone"/>-->
+
+		<result column="user_phone" property="userPhone"/>
+		<result column="user_name" property="userName"/>
+		<result column="is_admin" property="isAdmin"/>
+		<result column="door_id" property="doorID"/>
+		<result column="door_name" property="doorName"/>
+		<result column="relation_id" property="relationID"/>
+
+		<association column="user_id" property="userID" javaType="relation"/>
+		<association column="door_id" property="doorID" javaType="doorInfo"/>
+	</resultMap>
+
+	<select id="selectRelaDoorByUserPhone" parameterType="string" resultMap="result">
+		select a.user_name, a.user_phone, b.is_admin, c.door_id, c.door_name, b.relation_id
+		from user_info as a, relation as b, door_info as c
+		where a.user_id=b.user_id AND b.door_id=c.door_id AND user_phone=#{userPhone}
+	</select>
 
 </mapper>

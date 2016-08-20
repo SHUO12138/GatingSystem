@@ -2,6 +2,7 @@ package com.wechat.gatingsystem.dao;
 
 import com.wechat.gatingsystem.po.UserInfo;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -9,11 +10,14 @@ import java.util.List;
  */
 public interface UserInfoDAO {
 
-    List<UserInfo> findAllUser();
+    List<HashMap<Object, Object>> findAllUser();
 
     UserInfo findUserInfoByID(int userID);
 
     void insertUserInfo(UserInfo userInfo);
 
     void deleteUserInfoByPhone(String userPhone);
+
+    //查找与某一个user相关联的门的信息
+    List<HashMap<Object, Object>> selectRelaDoorByUserPhone(String userPhone);
 }

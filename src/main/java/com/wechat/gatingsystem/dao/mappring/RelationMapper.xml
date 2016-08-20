@@ -6,6 +6,10 @@
 <mapper namespace="com.wechat.gatingsystem.dao.RelationDAO">
     <!-- mybatis 映射文件 相当于DAO的实现 每一个id相当于一个方法 -->
 
+    <select id="selectByRelationID" parameterType="int" resultType="relation">
+        select * from  relation where relation_id = #{relationID}
+    </select>
+
     <resultMap id="result" type="java.util.HashMap">
         <!-- id -->
         <id column="relation_id" property="relationID"/>
@@ -18,24 +22,12 @@
         <association property="doorID" column="door_id" javaType="doorInfo"></association>
     </resultMap>
 
-    <select id="selectByRelationID" parameterType="int" resultType="relation">
-        select * from  relation where relation_id = #{relationID}
-    </select>
-
     <select id="selectRecordByRelation" parameterType="Integer" resultMap="result">
 		select a.user_name, a.user_phone, d.door_name, b.record_time
 		from user_info as a,open_record as b ,relation as c, door_info as d
 		where  b.relation_id = c.relation_id AND a.user_id = c.user_id AND d.door_id=c.door_id
 		AND c.door_id=#{doorID}
 	</select>
-
-
-<!--    <resultMap id="result2" type="java.util.HashMap">
-
-        <result column="door_name" property="doorName"/>
-        <association column="door_id" property="doorID" javaType="doorInfo"/>
-        <association column="relation_id" property="relationID" javaType="openRecord"/>
-    </resultMap>-->
 
 
 </mapper>

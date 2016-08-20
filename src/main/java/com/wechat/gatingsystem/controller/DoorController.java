@@ -20,44 +20,49 @@ import java.util.Map;
 @RequestMapping(value = "/index")
 public class DoorController {
 
-	@Autowired
-	private DoorInfoServiceImpl doorInfoServiceImpl;
+    @Autowired
+    private DoorInfoServiceImpl doorInfoServiceImpl;
 
-	@Autowired
-	private UserInfoServiceImpl userInfoServiceImpl;
+    @Autowired
+    private UserInfoServiceImpl userInfoServiceImpl;
 
-	@Autowired
-	private RelationServiceImpl relationService;
+    @Autowired
+    private RelationServiceImpl relationService;
 
-	@Autowired
-	private OpenRecordServiceImpl openRecordService;
+    @Autowired
+    private OpenRecordServiceImpl openRecordService;
 
 
-	@RequestMapping(value = "/hello/{id}")
-	@ResponseBody
-	public Map hello(@PathVariable("id") int id){
-		Map<String,Object> strMap = new HashMap<String,Object>();
-		Relation relation = relationService.selectByRelationID(id);
-		strMap.put("name",relation.getDoorID());
-		return strMap;
-	}
+    @RequestMapping(value = "/selectRelationById/{id}")
+    @ResponseBody
+    public Map selectRelation(@PathVariable("id") int id) {
+        Map<String, Object> strMap = new HashMap<String, Object>();
+        Relation relation = relationService.selectByRelationID(id);
+        strMap.put("name", relation.getDoorID());
+        return strMap;
+    }
 
-	/*@RequestMapping(value = "/doorTest/{name}")
-	@ResponseBody
-	public Map doorTest(@PathVariable("name") String name){
-		Map<String,Object> strMap = new HashMap<String,Object>();
-		doorInfoServiceImpl.deleteDoorByName(name);
-		strMap.put("name",name);
-		return null;
-	}*/
+    @RequestMapping(value = "/findAllUser")
+    @ResponseBody
+    public List<HashMap<Object, Object>> findAllUser() {
 
-	@RequestMapping(value = "/searchRecord/{doorId}")
-	@ResponseBody
+        List<HashMap<Object, Object>> strMap = userInfoServiceImpl.findAllUser();
+        return strMap;
+    }
 
-	public List<HashMap<Object,Object>> searchRecord(@PathVariable("doorId") Integer doorID){
+    @RequestMapping(value = "/searchRecord/{doorId}")
+    @ResponseBody
+    public List<HashMap<Object, Object>> searchRecord(@PathVariable("doorId") Integer doorID) {
 
-		List<HashMap<Object, Object>> listMap =relationService.selectRecordByRelation(doorID);
-		return listMap;
-	}
+        List<HashMap<Object, Object>> listMap = relationService.selectRecordByRelation(doorID);
+        return listMap;
+    }
+
+    @RequestMapping(value = "/deleteDoor/{doorName}")
+    @ResponseBody
+    public void deleteDoor(@PathVariable("doorName") String doorName) {
+
+        doorInfoServiceImpl.deleteByDoorName(doorName);
+    }
 
 }

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -22,12 +23,9 @@ public class UserInfoServiceImpl implements IUserInfoService{
     private UserInfoDAO userInfoDao;
 
     @Override
-    public List<UserInfo> findAllUser() {
+    public List<HashMap<Object, Object>> findAllUser() {
 
-        List<UserInfo> userList = new ArrayList<UserInfo>();
-
-        userList = userInfoDao.findAllUser();
-
+        List<HashMap<Object, Object>> userList = userInfoDao.findAllUser();
         return userList;
     }
 
@@ -50,6 +48,13 @@ public class UserInfoServiceImpl implements IUserInfoService{
     public void deleteUserInfoByPhone(String userPhone) {
 
         userInfoDao.deleteUserInfoByPhone(userPhone);
+    }
+
+    @Override
+    public List<HashMap<Object, Object>> selectRelaDoorByUserPhone(String userPhone) {
+
+        List<HashMap<Object, Object>> userDoorRelaList = userInfoDao.selectRelaDoorByUserPhone(userPhone);
+        return userDoorRelaList;
     }
 
 

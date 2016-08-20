@@ -17,6 +17,8 @@
 		insert into door_info(door_name, door_create_time ) values(#{doorName}, #{doorCreateTime})
 	</insert>
 
+
+
 	<delete id="deleteByDoorName" parameterType="java.lang.String" >
 		delete a, b, r
 		from door_info as a, relation as b, open_record as r
