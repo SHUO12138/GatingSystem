@@ -24,7 +24,6 @@ public class RelationServiceImpl implements IRelationService{
     public Relation selectByRelationID(int relationID) {
 
         Relation relation = relationDao.selectByRelationID(relationID);
-        System.out.println(relation.getDoorID());
         return relation;
     }
 

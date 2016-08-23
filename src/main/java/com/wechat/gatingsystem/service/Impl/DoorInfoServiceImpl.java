@@ -3,6 +3,7 @@ package com.wechat.gatingsystem.service.Impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.alibaba.fastjson.JSON;
 import com.wechat.gatingsystem.dao.DoorInfoDAO;
 import com.wechat.gatingsystem.po.DoorInfo;
 import com.wechat.gatingsystem.service.IDoorInfoService;
@@ -47,5 +48,12 @@ public class DoorInfoServiceImpl implements IDoorInfoService {
     public void deleteByDoorName(String doorName) {
         doorInfoDao.deleteByDoorName(doorName);
     }
+
+	@Override
+	public String finfAlldoorInfo() {
+		 List<DoorInfo> doorInfoList = doorInfoDao.findAll();
+		 String json = JSON.toJSONString(doorInfoList);
+		return json;
+	}
 
 }
