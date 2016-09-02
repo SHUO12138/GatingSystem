@@ -5,48 +5,59 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wechat.gatingsystem.dao.UserInfoDAO">
 
-	<!-- mybatis 映射文件 相当于DAO的实现 每一个id相当于一个方法 -->
-	<select id="findAllUser" resultType="java.util.HashMap">
+    <!-- mybatis 映射文件 相当于DAO的实现 每一个id相当于一个方法 -->
+    <select id="findAllUser" resultType="java.util.HashMap">
 		select * from user_info
 	</select>
 
-	<select id="findUserInfoByID" parameterType="int" resultType="userInfo">
-		select * from user_info
-		<where>user_id = #{userID}</where>
-	</select>
+    <select id="findUserInfoByID" parameterType="int" resultType="userInfo">
+        select * from user_info
+        <where>user_id = #{userID}</where>
+    </select>
 
-	<insert id="insertUserInfo" parameterType="userInfo">
+    <insert id="insertUserInfo" parameterType="userInfo">
 		insert into user_info(user_name, user_phone, user_more_info)
 		values (#{userName}, #{userPhone}, #{userMoreInfo})
 	</insert>
 
-	<delete id="deleteUserInfoByPhone" parameterType="String">
+    <delete id="deleteUserInfoByPhone" parameterType="String">
 		delete from user_info where user_phone = #{userPhone}
 	</delete>
 
-	<resultMap id="result" type="java.util.HashMap">
+    <resultMap id="result" type="java.util.List">
 
-		<!--这里设置id属性，会影响输出 -->
-		<!--<id column="user_phone" property="userPhone"/> -->
+        <!--这里设置id属性，会影响输出 -->
+        <!--<id column="user_phone" property="userPhone"/> -->
+        <result column="user_phone" property="userPhone"/>
+        <result column="user_name" property="userName"/>
+        <result column="is_admin" property="isAdmin"/>
+        <result column="door_id" property="doorID"/>
+        <result column="door_name" property="doorName"/>
+        <result column="relation_id" property="relationID"/>
 
-		<result column="user_phone" property="userPhone" />
-		<result column="user_name" property="userName" />
-		<result column="is_admin" property="isAdmin" />
-		<result column="door_id" property="doorID" />
-		<result column="door_name" property="doorName" />
-		<result column="relation_id" property="relationID" />
+        <association column="user_id" property="userID" javaType="relation"/>
+        <association column="door_id" property="doorID" javaType="doorInfo"/>
+    </resultMap>
 
-		<association column="user_id" property="userID" javaType="relation" />
-		<association column="door_id" property="doorID" javaType="doorInfo" />
-	</resultMap>
-
-	<select id="selectRelaDoorByUserPhone" parameterType="string"
-		resultMap="result">
+    <select id="selectRelaDoorByUserPhone" parameterType="String" resultMap="result">
 		select a.user_name, a.user_phone, b.is_admin, c.door_id, c.door_name,
 		b.relation_id
 		from user_info as a, relation as b, door_info as c
 		where a.user_id=b.user_id AND b.door_id=c.door_id AND
 		user_phone=#{userPhone}
 	</select>
+
+    <update id="updateUser" parameterType="userInfo">
+        update user_info
+        set user_name=#{userName}, user_more_info=#{userMoreInfo}
+        where user_phone=#{userPhone}
+	</update>
+
+    <select id="findUserInfoByPhone" parameterType="String" resultType="userInfo">
+        select *
+        from user_info
+        where user_phone=#{userPhone}
+    </select>
+
 
 </mapper>

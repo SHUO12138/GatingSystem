@@ -13,7 +13,7 @@
 			
 		<property name="configLocation" value="classpath:mybatis-config.xml" />
 		
-				<property name="mapperLocations"
+		<property name="mapperLocations"
 			value="classpath:com/wechat/gatingsystem/dao/mappring/*Mapper.xml" />
 	</bean>
 

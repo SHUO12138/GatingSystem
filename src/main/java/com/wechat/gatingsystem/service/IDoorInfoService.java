@@ -11,14 +11,10 @@ import com.wechat.gatingsystem.po.DoorInfo;
 public interface IDoorInfoService {
 
     List<DoorInfo> findAll();
-    
-
 
     DoorInfo finddoorByID(int doorID);
 
     void insertDoorInfo(DoorInfo doorInfo);
 
     void deleteByDoorName(String doorName);
-
-	String finfAlldoorInfo();
 }

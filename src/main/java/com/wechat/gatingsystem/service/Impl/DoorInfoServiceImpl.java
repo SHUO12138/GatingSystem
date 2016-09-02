@@ -49,11 +49,4 @@ public class DoorInfoServiceImpl implements IDoorInfoService {
         doorInfoDao.deleteByDoorName(doorName);
     }
 
-	@Override
-	public String finfAlldoorInfo() {
-		 List<DoorInfo> doorInfoList = doorInfoDao.findAll();
-		 String json = JSON.toJSONString(doorInfoList);
-		return json;
-	}
-
 }

@@ -22,9 +22,9 @@ public class UserInfoServiceImpl implements IUserInfoService{
     private UserInfoDAO userInfoDao;
 
     @Override
-    public List<HashMap<Object, Object>> findAllUser() {
+    public List<UserInfo> findAllUser() {
 
-        List<HashMap<Object, Object>> userList = userInfoDao.findAllUser();
+        List<UserInfo> userList = userInfoDao.findAllUser();
         return userList;
     }
 
@@ -54,6 +54,18 @@ public class UserInfoServiceImpl implements IUserInfoService{
 
         List<HashMap<Object, Object>> userDoorRelaList = userInfoDao.selectRelaDoorByUserPhone(userPhone);
         return userDoorRelaList;
+    }
+
+    @Override
+    public void updateUser(UserInfo userInfo) {
+        userInfoDao.updateUser(userInfo);
+    }
+
+    @Override
+    public UserInfo findUserInfoByPhone(String phone) {
+        UserInfo userInfo;
+        userInfo = userInfoDao.findUserInfoByPhone(phone);
+        return userInfo;
     }
 
 

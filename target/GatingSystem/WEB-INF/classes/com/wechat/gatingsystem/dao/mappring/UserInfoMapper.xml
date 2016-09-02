@@ -22,7 +22,7 @@
 		delete from user_info where user_phone = #{userPhone}
 	</delete>
 
-	<resultMap id="result" type="java.util.HashMap">
+	<resultMap id="result" type="java.util.List">
 		<result column="user_phone" property="userPhone"/>
 		<result column="user_name" property="userName"/>
 		<result column="is_admin" property="isAdmin"/>
@@ -34,10 +34,22 @@
 		<association column="door_id" property="doorID" javaType="doorInfo"/>
 	</resultMap>
 
-	<select id="selectRelaDoorByUserPhone" parameterType="string" resultMap="result">
+	<select id="selectRelaDoorByUserPhone" parameterType="String" resultMap="result">
 		select a.user_name, a.user_phone, b.is_admin, c.door_id, c.door_name, b.relation_id
 		from user_info as a, relation as b, door_info as c
 		where a.user_id=b.user_id AND b.door_id=c.door_id AND user_phone=#{userPhone}
+	</select>
+
+	<update id="updateUser" parameterType="userInfo">
+		update user_info
+		set user_name=#{userName}, user_more_info=#{userMoreInfo}
+		where user_phone=#{userPhone}
+	</update>
+
+	<select id="findUserInfoByPhone" parameterType="String" resultType="userInfo">
+		select *
+		from user_info
+		where user_phone=#{userPhone}
 	</select>
 
 </mapper>

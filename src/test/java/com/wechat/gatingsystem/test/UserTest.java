@@ -1,6 +1,7 @@
 package com.wechat.gatingsystem.test;
 
 import com.wechat.gatingsystem.dao.UserInfoDAO;
+import com.wechat.gatingsystem.po.UserInfo;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -30,13 +31,24 @@ public class UserTest extends BaseTest {
     public void selectAllUser(){
 
         //应该得到三条数据
-        List<HashMap<Object,Object>> map = userInfoDAO.findAllUser();
+        List<UserInfo> map = userInfoDAO.findAllUser();
 
         for(int i = 0; i < map.size(); i++) {
             System.out.println(map.size());
             System.out.println(map.get(i));
         }
     }
+
+//    @Test
+//    public void update(){
+//        UserInfo userInfo = null;
+//
+//        userInfo.userPhone = "999999999";
+//        userInfo.userName = "teserest";
+//        userInfo.userMoreInfo = "moreinfo";
+//
+//        userInfoDAO.updateUser(userInfo);
+//    }
 
 
 

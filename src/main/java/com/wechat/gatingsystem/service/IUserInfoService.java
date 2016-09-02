@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface IUserInfoService {
 
-    List<HashMap<Object, Object>> findAllUser();
+    List<UserInfo> findAllUser();
 
     UserInfo findUserInfoByID(int userID);
 
@@ -19,4 +19,8 @@ public interface IUserInfoService {
     void deleteUserInfoByPhone(String userPhone);
 
     List<HashMap<Object, Object>> selectRelaDoorByUserPhone(String userPhone);
+
+    void updateUser(UserInfo userInfo);
+
+    UserInfo findUserInfoByPhone(String phone);
 }
