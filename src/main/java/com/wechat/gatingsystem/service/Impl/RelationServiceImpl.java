@@ -33,4 +33,9 @@ public class RelationServiceImpl implements IRelationService{
         List<HashMap<Object, Object>> listMap = relationDao.selectRecordByRelation(doorId);
         return listMap;
     }
+
+    @Override
+    public void insertRelation(int userID, int doorID, int isAdmin) {
+        relationDao.insertRelation(userID, doorID, isAdmin);
+    }
 }

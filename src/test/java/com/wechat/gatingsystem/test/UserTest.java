@@ -19,7 +19,7 @@ public class UserTest extends BaseTest {
     public void selectRelaByUPhone(){
 
         //应该得到三条数据
-        List<HashMap<Object,Object>> map = userInfoDAO.selectRelaDoorByUserPhone("15280923281");
+        List<Object> map = userInfoDAO.selectRelaDoorByUserPhone("15280923281");
 
         for(int i = 0; i < map.size(); i++) {
             System.out.println(map.size());

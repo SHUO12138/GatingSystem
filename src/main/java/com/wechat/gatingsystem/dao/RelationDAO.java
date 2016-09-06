@@ -17,4 +17,6 @@ public interface RelationDAO {
     //opend_record(relation_id) -> relation(user_id、door_id) -> user_info(user_name、user_phone)、door_info(door_name)
     List<HashMap<Object, Object>> selectRecordByRelation(Integer doorId);
 
+    //传入user_id, door_id来对relation表进行更新
+    void insertRelation(int userID, int doorID, int isAdmin);
 }

@@ -40,13 +40,18 @@ public class DoorInfoServiceImpl implements IDoorInfoService {
     public void insertDoorInfo(DoorInfo doorInfo) {
 
         doorInfoDao.insertDoorInfo(doorInfo);
-        return;
-
     }
 
     @Override
     public void deleteByDoorName(String doorName) {
         doorInfoDao.deleteByDoorName(doorName);
+    }
+
+    @Override
+    public List<DoorInfo> finddoorByName(String name) {
+
+        List<DoorInfo> doorInfo = doorInfoDao.finddoorByName(name);
+        return doorInfo;
     }
 
 }

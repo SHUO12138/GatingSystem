@@ -50,9 +50,9 @@ public class UserInfoServiceImpl implements IUserInfoService{
     }
 
     @Override
-    public List<HashMap<Object, Object>> selectRelaDoorByUserPhone(String userPhone) {
+    public List<Object> selectRelaDoorByUserPhone(String userPhone) {
 
-        List<HashMap<Object, Object>> userDoorRelaList = userInfoDao.selectRelaDoorByUserPhone(userPhone);
+        List<Object> userDoorRelaList = userInfoDao.selectRelaDoorByUserPhone(userPhone);
         return userDoorRelaList;
     }
 
@@ -62,9 +62,9 @@ public class UserInfoServiceImpl implements IUserInfoService{
     }
 
     @Override
-    public UserInfo findUserInfoByPhone(String phone) {
-        UserInfo userInfo;
-        userInfo = userInfoDao.findUserInfoByPhone(phone);
+    public List<UserInfo> findUserInfoByPhone(String phone) {
+
+        List<UserInfo> userInfo = userInfoDao.findUserInfoByPhone(phone);
         return userInfo;
     }
 

@@ -13,4 +13,6 @@ public interface IRelationService {
     Relation selectByRelationID(int relationID);
 
     List<HashMap<Object, Object>> selectRecordByRelation(Integer doorId);
+
+    void insertRelation(int userID, int doorID, int isAdmin);
 }

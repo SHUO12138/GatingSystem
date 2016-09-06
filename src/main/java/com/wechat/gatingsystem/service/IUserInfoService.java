@@ -18,9 +18,9 @@ public interface IUserInfoService {
 
     void deleteUserInfoByPhone(String userPhone);
 
-    List<HashMap<Object, Object>> selectRelaDoorByUserPhone(String userPhone);
+    List<Object> selectRelaDoorByUserPhone(String userPhone);
 
     void updateUser(UserInfo userInfo);
 
-    UserInfo findUserInfoByPhone(String phone);
+    List<UserInfo> findUserInfoByPhone(String phone);
 }

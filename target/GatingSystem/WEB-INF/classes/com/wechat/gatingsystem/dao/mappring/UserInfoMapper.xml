@@ -22,20 +22,22 @@
 		delete from user_info where user_phone = #{userPhone}
 	</delete>
 
-	<resultMap id="result" type="java.util.List">
+	<resultMap id="result" type="java.util.HashMap">
 		<result column="user_phone" property="userPhone"/>
 		<result column="user_name" property="userName"/>
 		<result column="is_admin" property="isAdmin"/>
 		<result column="door_id" property="doorID"/>
 		<result column="door_name" property="doorName"/>
 		<result column="relation_id" property="relationID"/>
+		<result column="door_create_time" property="doorCreateTime"/>
+		<result column="door_more_info" property="doorMoreInfo"/>
 
 		<association column="user_id" property="userID" javaType="relation"/>
 		<association column="door_id" property="doorID" javaType="doorInfo"/>
 	</resultMap>
 
 	<select id="selectRelaDoorByUserPhone" parameterType="String" resultMap="result">
-		select a.user_name, a.user_phone, b.is_admin, c.door_id, c.door_name, b.relation_id
+		select a.user_name, a.user_phone, b.is_admin, c.door_id, c.door_name,c.door_create_time,c.door_more_info,b.relation_id
 		from user_info as a, relation as b, door_info as c
 		where a.user_id=b.user_id AND b.door_id=c.door_id AND user_phone=#{userPhone}
 	</select>
@@ -46,7 +48,7 @@
 		where user_phone=#{userPhone}
 	</update>
 
-	<select id="findUserInfoByPhone" parameterType="String" resultType="userInfo">
+	<select id="findUserInfoByPhone" parameterType="String" resultType="java.util.HashMap">
 		select *
 		from user_info
 		where user_phone=#{userPhone}

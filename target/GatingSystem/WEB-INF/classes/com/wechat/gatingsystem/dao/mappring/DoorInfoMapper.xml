@@ -13,8 +13,13 @@
 		select * from door_info where door_id = #{doorID}
 	</select>
 
+	<select id="finddoorByName" parameterType="String" resultType="java.util.HashMap">
+		select * from door_info where door_name = #{doorName}
+	</select>
+
 	<insert id="insertDoorInfo" parameterType="doorInfo">
-		insert into door_info(door_name, door_create_time ) values(#{doorName}, #{doorCreateTime})
+		insert into door_info(door_name, door_create_time, door_location, door_more_info)
+		values(#{doorName}, #{doorCreateTime}, #{doorLocation}, #{doorMoreInfo})
 	</insert>
 
 

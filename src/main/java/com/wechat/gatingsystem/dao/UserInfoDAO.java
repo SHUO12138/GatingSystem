@@ -19,11 +19,11 @@ public interface UserInfoDAO {
     void deleteUserInfoByPhone(String userPhone);
 
     //查找与某一个user相关联的门的信息
-    List<HashMap<Object, Object>> selectRelaDoorByUserPhone(String userPhone);
+    List<Object> selectRelaDoorByUserPhone(String userPhone);
 
     //更新用户信息
     void updateUser(UserInfo userInfo);
 
     //通过电话号码查找用户
-    UserInfo findUserInfoByPhone(String phone);
+    List<UserInfo> findUserInfoByPhone(String phone);
 }

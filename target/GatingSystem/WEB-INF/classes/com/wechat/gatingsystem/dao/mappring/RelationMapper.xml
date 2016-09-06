@@ -28,6 +28,9 @@
 		AND c.door_id=#{doorID}
 	</select>
 
-
+	<insert id="insertRelation" >
+		insert into relation(user_id, door_id, is_admin)
+		values(#{0}, #{1}, #{2})
+	</insert>
 
 </mapper>
