@@ -54,4 +54,11 @@ public class DoorInfoServiceImpl implements IDoorInfoService {
         return doorInfo;
     }
 
+    @Override
+    public Integer findDoorId(String doorName) {
+
+        int doorId = doorInfoDao.findDoorId(doorName);
+        return doorId;
+    }
+
 }

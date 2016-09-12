@@ -29,11 +29,10 @@ public class UserInfoServiceImpl implements IUserInfoService{
     }
 
     @Override
-    public UserInfo findUserInfoByID(int userID) {
+    public Integer findUserId(String userPhone) {
 
-        UserInfo userInfo;
-        userInfo = userInfoDao.findUserInfoByID(userID);
-        return userInfo;
+        int userId = userInfoDao.findUserId(userPhone);
+        return userId;
     }
 
     @Override
@@ -65,6 +64,18 @@ public class UserInfoServiceImpl implements IUserInfoService{
     public List<UserInfo> findUserInfoByPhone(String phone) {
 
         List<UserInfo> userInfo = userInfoDao.findUserInfoByPhone(phone);
+        return userInfo;
+    }
+
+    @Override
+    public List<UserInfo> showUserByPhone(String phone) {
+        List<UserInfo> userInfo = userInfoDao.findUserInfoByPhone(phone);
+        return userInfo;
+    }
+
+    @Override
+    public List<UserInfo> findUserInfoById(Integer userId) {
+        List<UserInfo> userInfo = userInfoDao.findUserInfoById(userId);
         return userInfo;
     }
 

@@ -3,6 +3,11 @@
     <output-path>$PROJECT_DIR$/target</output-path>
     <root id="archive" name="GatingSystem.war">
       <element id="artifact" artifact-name="GatingSystem:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="json-lib-2.4-jdk15" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>

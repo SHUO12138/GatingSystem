@@ -1,6 +1,7 @@
 package com.wechat.gatingsystem.service.Impl;
 
 import com.wechat.gatingsystem.dao.RelationDAO;
+import com.wechat.gatingsystem.po.DoorInfo;
 import com.wechat.gatingsystem.po.Relation;
 import com.wechat.gatingsystem.service.IRelationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +36,19 @@ public class RelationServiceImpl implements IRelationService{
     }
 
     @Override
-    public void insertRelation(int userID, int doorID, int isAdmin) {
+    public void insertRelation(Integer userID, Integer doorID, Integer isAdmin) {
         relationDao.insertRelation(userID, doorID, isAdmin);
     }
+
+    @Override
+    public List<Relation> findUserIdInRelation(Integer doorId) {
+        List<Relation> list = relationDao.findUserIdInRelation(doorId);
+        return list;
+    }
+
+    @Override
+    public void deleteRelationByDoorUserId(Integer userId, Integer doorId) {
+        relationDao.deleteRelationByDoorUserId(userId, doorId);
+    }
+
 }

@@ -12,7 +12,7 @@ public interface IUserInfoService {
 
     List<UserInfo> findAllUser();
 
-    UserInfo findUserInfoByID(int userID);
+    Integer findUserId(String userPhone);
 
     void insertUserInfo(UserInfo userInfo);
 
@@ -23,4 +23,8 @@ public interface IUserInfoService {
     void updateUser(UserInfo userInfo);
 
     List<UserInfo> findUserInfoByPhone(String phone);
+
+    List<UserInfo> showUserByPhone(String phone);
+
+    List<UserInfo> findUserInfoById(Integer userId);
 }

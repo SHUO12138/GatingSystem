@@ -1,11 +1,8 @@
 package com.wechat.gatingsystem.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.sun.javafx.beans.annotations.NonNull;
-import com.sun.xml.internal.ws.encoding.XMLHTTPBindingCodec;
 import com.wechat.gatingsystem.po.DoorInfo;
 import com.wechat.gatingsystem.po.Relation;
-import com.wechat.gatingsystem.po.UserInfo;
 import com.wechat.gatingsystem.service.Impl.DoorInfoServiceImpl;
 import com.wechat.gatingsystem.service.Impl.OpenRecordServiceImpl;
 import com.wechat.gatingsystem.service.Impl.RelationServiceImpl;
@@ -33,85 +30,9 @@ public class DoorController {
 
     @Autowired
     private DoorInfoServiceImpl doorInfoServiceImpl;
-
-    @Autowired
-    private UserInfoServiceImpl userInfoServiceImpl;
-
     @Autowired
     private RelationServiceImpl relationService;
 
-    @Autowired
-    private OpenRecordServiceImpl openRecordService;
-
-    //http://localhost:8080/gatingsystem/index/findAllUser
-    /**
-     * 前段和服务器交互的时候，出现了500错误
-     * 修改：
-     * 1.去掉了@ResponseBody
-     * 2.去掉了@RequestMapping里边的value=
-     * 3.把userInfoServiceImpl.findAllUser()的返回值改为List<UserInfo>
-     */
-    //查找所有用户的信息
-    @RequestMapping("/findAllUser")
-    public void findAllUser(HttpServletRequest request, HttpServletResponse response) {
-
-        List<UserInfo> strMap = userInfoServiceImpl.findAllUser();
-        String json = JSON.toJSONString(strMap);
-        JsonUtils.writeJson(json, request, response);
-    }
-
-    //通过用户手机查找用户
-    @RequestMapping("/findUserByPhone")
-    public void findUserByPhone(HttpServletRequest request, HttpServletResponse response, String userPhone){
-
-        System.out.println(userPhone);
-        JsonUtils userJsonUtils = new JsonUtils();
-        List<UserInfo> userInfo = userInfoServiceImpl.findUserInfoByPhone(userPhone);
-        String json = JSON.toJSONString(userInfo);
-        System.out.println(json.length());
-        userJsonUtils.writeJson(json, request, response);
-    }
-
-    //增加用户，这个时候只是增加了用户的手机号
-    @RequestMapping("/insertUser")
-    public void insertUser(String userPhone) {
-
-        UserInfo userInfo = new UserInfo();
-        userInfo.setUserPhone(userPhone);
-        userInfo.userPhone = userInfo.getUserPhone();
-
-        userInfoServiceImpl.insertUserInfo(userInfo);
-
-    }
-
-    //更新用户，增加手机号之外的信息
-    //http://localhost:8080/gatingsystem/index/updateUser
-    @RequestMapping("/updateUser")
-    public void updateUser(String userPhone, String userName, String userInfo) {
-
-        UserInfo user = new UserInfo();
-        user.setUserName(userName);
-        user.setUserMoreInfo(userInfo);
-        user.setUserPhone(userPhone);
-        user.userPhone = user.getUserPhone();
-        user.userName = user.getUserName();
-        user.userMoreInfo = user.getUserMoreInfo();
-
-        userInfoServiceImpl.updateUser(user);
-
-    }
-
-    //用户管理的门，可以开的门
-    @RequestMapping("/searchRelations")
-    public void searchRelation(String userPhone, HttpServletRequest request, HttpServletResponse response) {
-
-        List<Object> relationList = userInfoServiceImpl.selectRelaDoorByUserPhone(userPhone);
-        JsonUtils mDoorJsonUtils = new JsonUtils();
-        String json = JSON.toJSONString(relationList);
-        System.out.println(json);
-        mDoorJsonUtils.writeJson(json, request, response);
-
-    }
 
 
     //查找所有门的信息
@@ -148,7 +69,16 @@ public class DoorController {
     public void findDoorByName(String doorName, HttpServletRequest request, HttpServletResponse response){
 
         List<DoorInfo> door = doorInfoServiceImpl.finddoorByName(doorName);
+        //json == null json: []
         String json = JSON.toJSONString(door);
+        //门不存在
+        if(json.length() <= 2){
+            json = "0";
+        }
+        //门已经存在
+        else{
+            json = "1";
+        }
         JsonUtils.writeJson(json, request, response);
     }
 
@@ -157,12 +87,6 @@ public class DoorController {
     public void deleteByDoorName(String doorName){
 
         doorInfoServiceImpl.deleteByDoorName(doorName);
-    }
-
-    @RequestMapping("/insertRelation")
-    public void insertRelation(int userId, int doorId, int isAdmin){
-
-        relationService.insertRelation(userId, doorId, isAdmin);
     }
 
 

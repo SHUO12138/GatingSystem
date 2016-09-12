@@ -1,5 +1,6 @@
 package com.wechat.gatingsystem.service;
 
+import com.wechat.gatingsystem.po.DoorInfo;
 import com.wechat.gatingsystem.po.Relation;
 
 import java.util.HashMap;
@@ -14,5 +15,9 @@ public interface IRelationService {
 
     List<HashMap<Object, Object>> selectRecordByRelation(Integer doorId);
 
-    void insertRelation(int userID, int doorID, int isAdmin);
+    void insertRelation(Integer userID, Integer doorID, Integer isAdmin);
+
+    List<Relation> findUserIdInRelation(Integer doorId);
+
+    void deleteRelationByDoorUserId(Integer userId, Integer doorId);
 }

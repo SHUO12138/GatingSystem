@@ -9,8 +9,10 @@
 		select * from door_info
 	</select>
 
-	<select id="finddoorByID" parameterType="int" resultType="DoorInfo">
-		select * from door_info where door_id = #{doorID}
+	<select id="findDoorId" parameterType="String" resultType="Integer">
+		select door_id
+        from door_info
+        where door_name = #{doorName}
 	</select>
 
 	<select id="finddoorByName" parameterType="String" resultType="java.util.HashMap">

@@ -12,7 +12,8 @@ public interface UserInfoDAO {
 
     List<UserInfo> findAllUser();
 
-    UserInfo findUserInfoByID(int userID);
+    //根据名字查找出user_id
+    Integer findUserId(String userPhone);
 
     void insertUserInfo(UserInfo userInfo);
 
@@ -24,6 +25,12 @@ public interface UserInfoDAO {
     //更新用户信息
     void updateUser(UserInfo userInfo);
 
-    //通过电话号码查找用户
+    //通过电话号码查找用户是否存在
     List<UserInfo> findUserInfoByPhone(String phone);
+
+    //显示存在的用户
+    List<UserInfo> showUserByPhone(String phone);
+
+    //通过用户id查找用户
+    List<UserInfo> findUserInfoById(Integer userId);
 }

@@ -24,5 +24,7 @@ public interface DoorInfoDAO {
 	//根据door名字选出doot
 	List<DoorInfo> finddoorByName(String name);
 
+	//根据名字查找出door_id
+	int findDoorId(String doorName);
 
 }

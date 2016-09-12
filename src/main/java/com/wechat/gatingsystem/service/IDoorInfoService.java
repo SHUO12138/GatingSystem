@@ -19,4 +19,6 @@ public interface IDoorInfoService {
     void deleteByDoorName(String doorName);
 
     List<DoorInfo> finddoorByName(String name);
+
+    Integer findDoorId(String doorName);
 }

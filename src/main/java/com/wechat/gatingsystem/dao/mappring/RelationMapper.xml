@@ -34,4 +34,14 @@
         values(#{0}, #{1}, #{2})
     </insert>
 
+    <select id="findUserIdInRelation" parameterType="Integer" resultType="Relation">
+        select *
+        from relation
+        where door_id=#{doorID}
+    </select>
+
+    <delete id="deleteRelationByDoorUserId" >
+        delete from relation where user_id = #{0} and door_id=#{1}
+    </delete>
+
 </mapper>

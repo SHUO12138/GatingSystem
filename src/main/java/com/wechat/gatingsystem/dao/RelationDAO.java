@@ -1,5 +1,6 @@
 package com.wechat.gatingsystem.dao;
 
+import com.wechat.gatingsystem.po.DoorInfo;
 import com.wechat.gatingsystem.po.Relation;
 
 import java.util.HashMap;
@@ -18,5 +19,11 @@ public interface RelationDAO {
     List<HashMap<Object, Object>> selectRecordByRelation(Integer doorId);
 
     //传入user_id, door_id来对relation表进行更新
-    void insertRelation(int userID, int doorID, int isAdmin);
+    void insertRelation(Integer userID, Integer doorID, Integer isAdmin);
+
+    //根据door_id查找userID的信息
+    List<Relation> findUserIdInRelation(Integer doorId);
+
+    //删除用户之后要修改relation表
+    void deleteRelationByDoorUserId(Integer userId, Integer doorId);
 }

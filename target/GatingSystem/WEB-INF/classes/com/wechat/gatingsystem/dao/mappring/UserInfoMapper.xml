@@ -9,8 +9,10 @@
 		select * from user_info
 	</select>
 
-	<select id="findUserInfoByID" parameterType="int" resultType="userInfo">
-		select * from user_info where user_id = #{userID}
+	<select id="findUserId" parameterType="String" resultType="Integer">
+		select user_id
+		from user_info
+		where user_phone = #{userPhone}
 	</select>
 
 	<insert id="insertUserInfo" parameterType="userInfo">
@@ -53,5 +55,12 @@
 		from user_info
 		where user_phone=#{userPhone}
 	</select>
+
+	<select id="findUserInfoById" parameterType="Integer" resultType="UserInfo">
+		select *
+		from user_info
+		where user_id=#{userID}
+	</select>
+
 
 </mapper>
