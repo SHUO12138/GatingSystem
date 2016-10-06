@@ -57,8 +57,14 @@ public class DoorInfoServiceImpl implements IDoorInfoService {
     @Override
     public Integer findDoorId(String doorName) {
 
-        int doorId = doorInfoDao.findDoorId(doorName);
+        Integer doorId = doorInfoDao.findDoorId(doorName);
         return doorId;
+    }
+
+    @Override
+    public Integer idMaxRecord() {
+        Integer maxId = doorInfoDao.idMaxRecord();
+        return maxId;
     }
 
 }

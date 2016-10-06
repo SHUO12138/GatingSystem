@@ -76,6 +76,22 @@ public class UserController {
 
     }
 
+    @RequestMapping("/insertDoorUser")
+    public void insertDoorUser(String userPhone, String userName, String userInfo) {
+
+        UserInfo user = new UserInfo();
+
+        user.setUserPhone(userPhone);
+        user.userPhone = user.getUserPhone();
+        user.setUserName(userName);
+        user.userName = user.getUserName();
+        user.setUserMoreInfo(userInfo);
+        user.userMoreInfo = user.getUserMoreInfo();
+
+        userInfoServiceImpl.insertUserInfo(user);
+
+    }
+
     //更新用户，增加手机号之外的信息
     //http://localhost:8080/gatingsystem/index/updateUser
     @RequestMapping("/updateUser")

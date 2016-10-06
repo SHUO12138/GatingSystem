@@ -21,4 +21,6 @@ public interface IDoorInfoService {
     List<DoorInfo> finddoorByName(String name);
 
     Integer findDoorId(String doorName);
+
+    Integer idMaxRecord();
 }

@@ -32,4 +32,9 @@
 		where b.door_id=a.door_id AND r.relation_id=b.relation_id AND a.door_name=#{doorName}
 	</delete>
 
+	<select id="idMaxRecord" resultType="Integer">
+		select max(door_id)
+		from door_info
+	</select>
+
 </mapper>

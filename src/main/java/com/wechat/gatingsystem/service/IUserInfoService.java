@@ -27,4 +27,6 @@ public interface IUserInfoService {
     List<UserInfo> showUserByPhone(String phone);
 
     List<UserInfo> findUserInfoById(Integer userId);
+
+    Integer idMaxRecord();
 }

@@ -25,6 +25,8 @@ public interface DoorInfoDAO {
 	List<DoorInfo> finddoorByName(String name);
 
 	//根据名字查找出door_id
-	int findDoorId(String doorName);
+	Integer findDoorId(String doorName);
 
+	//查找计入door_info表的最后一条数据
+	Integer idMaxRecord();
 }

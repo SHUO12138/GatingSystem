@@ -33,4 +33,7 @@ public interface UserInfoDAO {
 
     //通过用户id查找用户
     List<UserInfo> findUserInfoById(Integer userId);
+
+    //查找最後一個數據的id
+    Integer idMaxRecord();
 }

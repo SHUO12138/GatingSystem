@@ -31,7 +31,7 @@ public class UserInfoServiceImpl implements IUserInfoService{
     @Override
     public Integer findUserId(String userPhone) {
 
-        int userId = userInfoDao.findUserId(userPhone);
+        Integer userId = userInfoDao.findUserId(userPhone);
         return userId;
     }
 
@@ -77,6 +77,12 @@ public class UserInfoServiceImpl implements IUserInfoService{
     public List<UserInfo> findUserInfoById(Integer userId) {
         List<UserInfo> userInfo = userInfoDao.findUserInfoById(userId);
         return userInfo;
+    }
+
+    @Override
+    public Integer idMaxRecord() {
+        Integer maxId = userInfoDao.idMaxRecord();
+        return maxId;
     }
 
 

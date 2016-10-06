@@ -66,4 +66,9 @@
         where user_id=#{userID}
     </select>
 
+    <select id="idMaxRecord" resultType="Integer">
+        select max(user_id)
+        from user_info
+    </select>
+
 </mapper>

@@ -8,7 +8,6 @@ import com.wechat.gatingsystem.service.Impl.RelationServiceImpl;
 import com.wechat.gatingsystem.service.Impl.UserInfoServiceImpl;
 import com.wechat.gatingsystem.utils.JsonUtils;
 
-import net.sf.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,10 +31,7 @@ public class RelationController {
     @Autowired
     private DoorInfoServiceImpl doorInfoServiceImpl;
 
-    private Integer uID;
-    private Integer isAd;
-    private Integer dID;
-
+    private HashMap<String, Integer> integerMap = new HashMap<String, Integer>();
     //用户管理的门，可以开的门
     @RequestMapping("/searchRelations")
     public void searchRelation(String userPhone, HttpServletRequest request, HttpServletResponse response) {
@@ -49,36 +45,46 @@ public class RelationController {
 
     @RequestMapping("/getUserIdentity")
     public void getUserIdentity(Integer isAdmin) {
-
-        isAd = isAdmin;
+        integerMap.put("isAd", isAdmin);
     }
 
     @RequestMapping("/findUserId")
-    public void findUserId(String userPhone, HttpServletRequest request, HttpServletResponse response) {
+    public void findUserId(String userPhone) {
 
         Integer userId = userInfoServiceImpl.findUserId(userPhone);
-        uID = userId;
-        String json = JSON.toJSONString(userId);
-        JsonUtils.writeJson(json, request, response);
+        integerMap.put("userId", userId);
     }
 
-    //通过门的名字查找id
     @RequestMapping("/findDoorId")
-    public void findDoorId(String doorName, HttpServletRequest request, HttpServletResponse response) {
+    public void findDoorId(String doorName) {
 
-        int doorId = doorInfoServiceImpl.findDoorId(doorName);
-        dID = doorId;
-        String json = JSON.toJSONString(doorId);
-        JsonUtils.writeJson(json, request, response);
+        Integer doorId = doorInfoServiceImpl.findDoorId(doorName);
+        integerMap.put("userId", doorId);
+    }
 
+    @RequestMapping("/findUserMaxId")
+    public void findUserMaxId() {
+
+        Integer userId = userInfoServiceImpl.idMaxRecord();
+        integerMap.put("doorId", userId+1);
+    }
+
+    @RequestMapping("/findDoorMaxId")
+    public void findDoorMaxId() {
+
+        Integer doorId = doorInfoServiceImpl.idMaxRecord();
+        integerMap.put("doorId", doorId+1);
     }
 
     @RequestMapping("/insertRelation")
     public void insertRelation() {
 
-        if (uID != null && dID != null && isAd != null) {
-            System.out.println(uID + " " + dID + " " + isAd);
-            relationService.insertRelation(uID, dID, isAd);
+        Integer isAd = integerMap.get("isAd");
+        Integer doorId = integerMap.get("doorId");
+        Integer userId = integerMap.get("userId");
+        if (userId != null && doorId != null && isAd != null) {
+            relationService.insertRelation(userId, doorId, isAd);
+            integerMap.clear();
         }
     }
 
@@ -89,7 +95,10 @@ public class RelationController {
 //        List<DoorInfo> door = doorInfoServiceImpl.finddoorByName(doorName);
 //        dID = door.get(0).doorID;
         //java.util.HashMap can't cast to UserInfo
-        int doorId = doorInfoServiceImpl.findDoorId(doorName);
+        Integer dID;
+        Integer uID;
+        Integer isAd;
+        Integer doorId = doorInfoServiceImpl.findDoorId(doorName);
         dID = doorId;
         List<Relation> relationList = relationService.findUserIdInRelation(dID);
         List<Object> jsonList = new ArrayList<>();
@@ -120,14 +129,14 @@ public class RelationController {
 
     //删除relation里边的一条记录
     @RequestMapping("/deleteRelationByUDId")
-    public void deleteRelationByUId(String userPhone, String doorName) {
+    public void deleteRelationByUDId(String userPhone, String doorName) {
 
         Integer userId = userInfoServiceImpl.findUserId(userPhone);
-        uID = userId;
-        int doorId = doorInfoServiceImpl.findDoorId(doorName);
-        dID = doorId;
+        System.out.println(userId + "");
+        Integer doorId = doorInfoServiceImpl.findDoorId(doorName);
+        System.out.println(doorId + "");
 
-        relationService.deleteRelationByDoorUserId(uID, dID);
+        relationService.deleteRelationByDoorUserId(userId, doorId);
     }
 
 }
