@@ -15,22 +15,4 @@ public class DoorInfoDaoTest extends BaseTest{
 	private DoorInfoDAO doorInfoDao;
 
 
-
-	@Test
-	public void  test(){
-		doorInfoDao.findAll();
-		System.out.println("@@@@@@@@@"+ doorInfoDao.findAll().size());
-	}
-
-	@Test
-	public void testHello(){
-
-	}
-
-	@Test
-	public void testDeleteByNme(){
-		doorInfoDao.deleteByDoorName("test");
-	}
-
-
 }

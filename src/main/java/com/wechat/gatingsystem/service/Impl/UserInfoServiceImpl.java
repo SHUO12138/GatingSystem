@@ -20,34 +20,6 @@ public class UserInfoServiceImpl implements IUserInfoService{
 
     @Autowired
     private UserInfoDAO userInfoDao;
-
-    @Override
-    public List<UserInfo> findAllUser() {
-
-        List<UserInfo> userList = userInfoDao.findAllUser();
-        return userList;
-    }
-
-    @Override
-    public Integer findUserId(String userPhone) {
-
-        Integer userId = userInfoDao.findUserId(userPhone);
-        return userId;
-    }
-
-    @Override
-    public void insertUserInfo(UserInfo userInfo) {
-
-        userInfoDao.insertUserInfo(userInfo);
-
-    }
-
-    @Override
-    public void deleteUserInfoByPhone(String userPhone) {
-
-        userInfoDao.deleteUserInfoByPhone(userPhone);
-    }
-
     @Override
     public List<Object> selectRelaDoorByUserPhone(String userPhone) {
 
@@ -56,34 +28,32 @@ public class UserInfoServiceImpl implements IUserInfoService{
     }
 
     @Override
-    public void updateUser(UserInfo userInfo) {
-        userInfoDao.updateUser(userInfo);
+    public UserInfo findByName(String uName) {
+        UserInfo uInfo = userInfoDao.findByName(uName);
+        return uInfo;
     }
 
     @Override
-    public List<UserInfo> findUserInfoByPhone(String phone) {
-
-        List<UserInfo> userInfo = userInfoDao.findUserInfoByPhone(phone);
-        return userInfo;
+    public void insertUserInfo(UserInfo uInfo) {
+        userInfoDao.insertUserInfo(uInfo);
     }
 
     @Override
-    public List<UserInfo> showUserByPhone(String phone) {
-        List<UserInfo> userInfo = userInfoDao.findUserInfoByPhone(phone);
-        return userInfo;
+    public UserInfo judgePassword(String uName, String uPassword) {
+        UserInfo uInfo = userInfoDao.judgePassword(uName, uPassword);
+        return uInfo;
     }
 
     @Override
-    public List<UserInfo> findUserInfoById(Integer userId) {
-        List<UserInfo> userInfo = userInfoDao.findUserInfoById(userId);
-        return userInfo;
+    public void updateUserInfo(UserInfo uInfo) {
+
+        userInfoDao.updateUserInfo(uInfo);
     }
 
     @Override
-    public Integer idMaxRecord() {
-        Integer maxId = userInfoDao.idMaxRecord();
-        return maxId;
+    public UserInfo findById(int uId) {
+
+        UserInfo uInfo = userInfoDao.findById(uId);
+        return uInfo;
     }
-
-
 }

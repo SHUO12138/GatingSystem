@@ -9,7 +9,7 @@ public class OpenRecord {
 
     public int recordID;
     public int relationID;
-    public Date recordTie;
+    public Date recordTime;
 
     public int getRecordID() {
         return recordID;
@@ -27,11 +27,11 @@ public class OpenRecord {
         this.relationID = relationID;
     }
 
-    public Date getRecordTie() {
-        return recordTie;
+    public Date getRecordTime() {
+        return recordTime;
     }
 
-    public void setRecordTie(Date recordTie) {
-        this.recordTie = recordTie;
+    public void setRecordTime(Date recordTime) {
+        this.recordTime = recordTime;
     }
 }

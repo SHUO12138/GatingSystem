@@ -6,8 +6,11 @@
 <mapper namespace="com.wechat.gatingsystem.dao.OpenRecordDAO">
 	<!-- mybatis 映射文件 相当于DAO的实现 每一个id相当于一个方法 -->
 
-	<select id="selectByRecordID" parameterType="int" resultType="openRecord">
-		select * from  open_record where record_id = #{recordID}
-	</select>
+	<delete id="deleteRecord" parameterType="int">
+		delete from open_record where relation_id = #{relationID}
+	</delete>
 
+	<insert id="addOpenRecord" parameterType="openRecord">
+		insert into open_record(relation_id, record_time) values(#{relationID}, #{recordTime})
+	</insert>
 </mapper>

@@ -2,6 +2,7 @@ package com.wechat.gatingsystem.service.Impl;
 
 import com.wechat.gatingsystem.dao.OpenRecordDAO;
 import com.wechat.gatingsystem.po.OpenRecord;
+import com.wechat.gatingsystem.po.Relation;
 import com.wechat.gatingsystem.service.IOpenRecordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,11 +19,12 @@ public class OpenRecordServiceImpl implements IOpenRecordService{
     private OpenRecordDAO openRecordDao;
 
     @Override
-    public OpenRecord selectByRecordID(int recordID) {
-
-        OpenRecord openDoorRecord;
-        openDoorRecord = openRecordDao.selectByRecordID(recordID);
-        return openDoorRecord;
+    public void deleteRecord(int reId) {
+        openRecordDao.deleteRecord(reId);
     }
 
+    @Override
+    public void addOpenRecord(OpenRecord record) {
+        openRecordDao.addOpenRecord(record);
+    }
 }

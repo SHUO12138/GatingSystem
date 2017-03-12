@@ -1,11 +1,14 @@
 package com.wechat.gatingsystem.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.wechat.gatingsystem.dao.DoorInfoDAO;
+import com.wechat.gatingsystem.dao.OpenRecordDAO;
+import com.wechat.gatingsystem.dao.RelationDAO;
+import com.wechat.gatingsystem.dao.UserInfoDAO;
+import com.wechat.gatingsystem.po.DoorInfo;
 import com.wechat.gatingsystem.po.Relation;
 import com.wechat.gatingsystem.po.UserInfo;
-import com.wechat.gatingsystem.service.Impl.DoorInfoServiceImpl;
 import com.wechat.gatingsystem.service.Impl.RelationServiceImpl;
-import com.wechat.gatingsystem.service.Impl.UserInfoServiceImpl;
 import com.wechat.gatingsystem.utils.JsonUtils;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,117 +29,95 @@ public class RelationController {
     private RelationServiceImpl relationService;
 
     @Autowired
-    private UserInfoServiceImpl userInfoServiceImpl;
-
+    private RelationDAO relationDAO;
     @Autowired
-    private DoorInfoServiceImpl doorInfoServiceImpl;
+    private UserInfoDAO userInfoDAO;
+    @Autowired
+    private DoorInfoDAO doorInfoDAO;
+    @Autowired
+    private OpenRecordDAO openRecordDAO;
 
-    private HashMap<String, Integer> integerMap = new HashMap<String, Integer>();
-    //用户管理的门，可以开的门
-    @RequestMapping("/searchRelations")
-    public void searchRelation(String userPhone, HttpServletRequest request, HttpServletResponse response) {
+    @RequestMapping("/insertIntoRelation")
+    public void insertIntoRelation(String uName, String dName, int isAd,
+                               HttpServletRequest request, HttpServletResponse response){
 
-        List<Object> relationList = userInfoServiceImpl.selectRelaDoorByUserPhone(userPhone);
-        JsonUtils mDoorJsonUtils = new JsonUtils();
-        String json = JSON.toJSONString(relationList);
-        mDoorJsonUtils.writeJson(json, request, response);
-
-    }
-
-    @RequestMapping("/getUserIdentity")
-    public void getUserIdentity(Integer isAdmin) {
-        integerMap.put("isAd", isAdmin);
-    }
-
-    @RequestMapping("/findUserId")
-    public void findUserId(String userPhone) {
-
-        Integer userId = userInfoServiceImpl.findUserId(userPhone);
-        integerMap.put("userId", userId);
-    }
-
-    @RequestMapping("/findDoorId")
-    public void findDoorId(String doorName) {
-
-        Integer doorId = doorInfoServiceImpl.findDoorId(doorName);
-        integerMap.put("userId", doorId);
-    }
-
-    @RequestMapping("/findUserMaxId")
-    public void findUserMaxId() {
-
-        Integer userId = userInfoServiceImpl.idMaxRecord();
-        integerMap.put("doorId", userId+1);
-    }
-
-    @RequestMapping("/findDoorMaxId")
-    public void findDoorMaxId() {
-
-        Integer doorId = doorInfoServiceImpl.idMaxRecord();
-        integerMap.put("doorId", doorId+1);
-    }
-
-    @RequestMapping("/insertRelation")
-    public void insertRelation() {
-
-        Integer isAd = integerMap.get("isAd");
-        Integer doorId = integerMap.get("doorId");
-        Integer userId = integerMap.get("userId");
-        if (userId != null && doorId != null && isAd != null) {
-            relationService.insertRelation(userId, doorId, isAd);
-            integerMap.clear();
-        }
-    }
-
-    @RequestMapping("/findDoorUser")
-    public void findDoorUser(String doorName, HttpServletRequest request, HttpServletResponse response) {
-
-        //这个类型不匹配的问题吗？
-//        List<DoorInfo> door = doorInfoServiceImpl.finddoorByName(doorName);
-//        dID = door.get(0).doorID;
-        //java.util.HashMap can't cast to UserInfo
-        Integer dID;
-        Integer uID;
-        Integer isAd;
-        Integer doorId = doorInfoServiceImpl.findDoorId(doorName);
-        dID = doorId;
-        List<Relation> relationList = relationService.findUserIdInRelation(dID);
-        List<Object> jsonList = new ArrayList<>();
-        for (int i = 0; i < relationList.size(); i++) {
-
-            Relation re = relationList.get(i);
-            uID = re.userID;
-            isAd = re.isAdmin;
-            List<UserInfo> userList = userInfoServiceImpl.findUserInfoById(uID);
-
-            UserInfo user = new UserInfo();
-            if(userList != null) {
-                user = userList.get(0);
+        String resp;
+        String json;
+        DoorInfo dInfo = doorInfoDAO.findByName(dName);
+        UserInfo uInfo = userInfoDAO.findByName(uName);
+        if(dInfo != null && uInfo != null){
+            Relation re = new Relation();
+            re.userID = uInfo.userID;
+            re.doorID = dInfo.doorID;
+            re.isAdmin = isAd;
+            relationService.insertRelation(re);
+            re = new Relation();
+            re = relationService.findReByUDid(uInfo.userID, dInfo.doorID);
+            if(re != null){
+                resp = "1";
+            }else{
+                resp = "对不起添加用户失败";
             }
-
-            if (isAd == 1) {
-                user.setUserPhone(user.userPhone+"-1");
-                user.userPhone = user.getUserPhone();
-            } else {
-                user.setUserPhone(user.userPhone+"-0");
-                user.userPhone = user.getUserPhone();
-            }
-            jsonList.add(user);
+        }else{
+            resp = "对不起，不能添加用户";
         }
-        String json = JSON.toJSONString(jsonList);
+        json = JSON.toJSONString(resp);
         JsonUtils.writeJson(json, request, response);
     }
 
-    //删除relation里边的一条记录
-    @RequestMapping("/deleteRelationByUDId")
-    public void deleteRelationByUDId(String userPhone, String doorName) {
+    @RequestMapping("/lookUserOfDoor")
+    public void lookUserOfDoor(String dName, String uName,
+                               HttpServletRequest request, HttpServletResponse response){
 
-        Integer userId = userInfoServiceImpl.findUserId(userPhone);
-        System.out.println(userId + "");
-        Integer doorId = doorInfoServiceImpl.findDoorId(doorName);
-        System.out.println(doorId + "");
+        String json;
+        DoorInfo dInfo = doorInfoDAO.findByName(dName);
+        UserInfo userSelf = userInfoDAO.findByName(uName);
+        if(dInfo != null){
+            List<Relation> reList = relationService.selectByDid(dInfo.doorID);
+            List<UserInfo> uList = new ArrayList<UserInfo>();
+            for(Relation re: reList){
+                UserInfo uInfo = userInfoDAO.findById(re.userID);
+                if(uInfo.userID != userSelf.userID) {
+                    if(re.isAdmin == 1){
+                        uInfo.userPhone += "-1";
+                    }
+                    else if(re.isAdmin == 0){
+                        uInfo.userPhone += "-0";
+                    }
+                    uList.add(uInfo);
+                }
+            }
+            if(!uList.isEmpty()){
+                json = JSON.toJSONString(uList);
+            }else{
+                json = JSON.toJSONString("");
+            }
+        }else{
+            json = JSON.toJSONString("");
+        }
+        JsonUtils.writeJson(json,request, response);
+    }
 
-        relationService.deleteRelationByDoorUserId(userId, doorId);
+    @RequestMapping("/deleteRelation")
+    public void deleteRelation(String dName, String uName,
+                           HttpServletRequest request, HttpServletResponse response){
+
+        String resp;
+        String json;
+        DoorInfo dInfo = doorInfoDAO.findByName(dName);
+        UserInfo uInfo = userInfoDAO.findByName(uName);
+        if(dInfo != null && uInfo != null){
+            Relation re = relationService.findReByUDid(uInfo.userID, dInfo.doorID);
+            relationService.deleteReByUDid(uInfo.userID, dInfo.doorID);
+            openRecordDAO.deleteRecord(re.relationID);
+
+            resp = "1";
+        }else{
+            resp = "0";
+        }
+
+        json = JSON.toJSONString(resp);
+        JsonUtils.writeJson(json, request, response);
     }
 
 }

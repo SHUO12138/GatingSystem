@@ -10,30 +10,21 @@ import java.util.List;
  */
 public interface UserInfoDAO {
 
-    List<UserInfo> findAllUser();
-
-    //根据名字查找出user_id
-    Integer findUserId(String userPhone);
-
-    void insertUserInfo(UserInfo userInfo);
-
-    void deleteUserInfoByPhone(String userPhone);
-
     //查找与某一个user相关联的门的信息
     List<Object> selectRelaDoorByUserPhone(String userPhone);
 
+    //查找这个用户是否已经注册过
+    UserInfo findByName(String uName);
+
+    //插入用户信息
+    void insertUserInfo(UserInfo uInfo);
+
+    //判断用户输入的账号密码是否匹配
+    UserInfo judgePassword(String uName, String uPassword);
+
     //更新用户信息
-    void updateUser(UserInfo userInfo);
+    void updateUserInfo(UserInfo uInfo);
 
-    //通过电话号码查找用户是否存在
-    List<UserInfo> findUserInfoByPhone(String phone);
-
-    //显示存在的用户
-    List<UserInfo> showUserByPhone(String phone);
-
-    //通过用户id查找用户
-    List<UserInfo> findUserInfoById(Integer userId);
-
-    //查找最後一個數據的id
-    Integer idMaxRecord();
+    //通过id查找用户
+    UserInfo findById(int uId);
 }

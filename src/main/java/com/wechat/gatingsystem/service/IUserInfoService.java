@@ -10,23 +10,16 @@ import java.util.List;
  */
 public interface IUserInfoService {
 
-    List<UserInfo> findAllUser();
-
-    Integer findUserId(String userPhone);
-
-    void insertUserInfo(UserInfo userInfo);
-
-    void deleteUserInfoByPhone(String userPhone);
 
     List<Object> selectRelaDoorByUserPhone(String userPhone);
 
-    void updateUser(UserInfo userInfo);
+    UserInfo findByName(String uName);
 
-    List<UserInfo> findUserInfoByPhone(String phone);
+    void insertUserInfo(UserInfo uInfo);
 
-    List<UserInfo> showUserByPhone(String phone);
+    UserInfo judgePassword(String uName, String uPassword);
 
-    List<UserInfo> findUserInfoById(Integer userId);
+    void updateUserInfo(UserInfo uInfo);
 
-    Integer idMaxRecord();
+    UserInfo findById(int uId);
 }

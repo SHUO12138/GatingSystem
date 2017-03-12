@@ -26,30 +26,4 @@ public class UserTest extends BaseTest {
             System.out.println(map.get(i));
         }
     }
-
-    @Test
-    public void selectAllUser(){
-
-        //应该得到三条数据
-        List<UserInfo> map = userInfoDAO.findAllUser();
-
-        for(int i = 0; i < map.size(); i++) {
-            System.out.println(map.size());
-            System.out.println(map.get(i));
-        }
-    }
-
-//    @Test
-//    public void update(){
-//        UserInfo userInfo = null;
-//
-//        userInfo.userPhone = "999999999";
-//        userInfo.userName = "teserest";
-//        userInfo.userMoreInfo = "moreinfo";
-//
-//        userInfoDAO.updateUser(userInfo);
-//    }
-
-
-
 }

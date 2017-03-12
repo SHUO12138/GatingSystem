@@ -24,14 +24,14 @@ import com.wechat.gatingsystem.dao.DoorInfoDAO;
 public class BaseTest {
 	@Autowired
 	private DoorInfoDAO doorInfoDao;
-	@Test
-	public void  test(){
-		try {
-			doorInfoDao.findAll();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println("@@@@@@@@@"+ doorInfoDao.findAll().size());
-	}
+//	@Test
+//	public void  test(){
+//		try {
+//			doorInfoDao.findAll();
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		System.out.println("@@@@@@@@@"+ doorInfoDao.findAll().size());
+//	}
 }

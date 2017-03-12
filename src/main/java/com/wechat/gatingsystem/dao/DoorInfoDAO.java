@@ -1,32 +1,18 @@
 package com.wechat.gatingsystem.dao;
 
-
-import java.util.List;
-
 import com.wechat.gatingsystem.po.DoorInfo;
-
-
 
 public interface DoorInfoDAO {
 
-	List<DoorInfo> findAll();
+	//添加门的信息
+	void insertDoorInfo(DoorInfo dInfo);
 
+	//根据门的名字查找门
+	DoorInfo findByName(String dName);
 
-	DoorInfo finddoorByID(int doorID);
+	//删除一扇门的信息
+	void deleteDoor(String dName);
 
-	//增加一个门的信息
-	void insertDoorInfo(DoorInfo doorInfo);
-
-	//删除doorInfo。删除doorInfo的同时，要删除relation open_record里边的记录。
-	//但是这个需要relation，open_record里边同时有关于这个门的记录的时候才可以执行成功
-	void deleteByDoorName(String doorName);
-
-	//根据door名字选出doot
-	List<DoorInfo> finddoorByName(String name);
-
-	//根据名字查找出door_id
-	Integer findDoorId(String doorName);
-
-	//查找计入door_info表的最后一条数据
-	Integer idMaxRecord();
+	//通过id查询门
+	DoorInfo selectDoorById(int dId);
 }

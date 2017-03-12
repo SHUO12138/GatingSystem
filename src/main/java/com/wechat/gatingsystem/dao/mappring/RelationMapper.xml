@@ -4,44 +4,29 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wechat.gatingsystem.dao.RelationDAO">
-    <!-- mybatis 映射文件 相当于DAO的实现 每一个id相当于一个方法 -->
 
-    <select id="selectByRelationID" parameterType="int" resultType="relation">
-        select * from  relation where relation_id = #{relationID}
-    </select>
-
-    <resultMap id="result" type="java.util.HashMap">
-        <!-- id -->
-        <id column="relation_id" property="relationID"/>
-        <result column="user_name" property="userName"/>
-        <result column="user_phone" property="userPhone"/>
-        <result column="door_name" property="doorName"/>
-        <result column="record_time" property="recordTime"/>
-        <association property="relationID" column="relation_id" javaType="openRecord"></association>
-        <association property="userID" column="user_id" javaType="userInfo"></association>
-        <association property="doorID" column="door_id" javaType="doorInfo"></association>
-    </resultMap>
-
-    <select id="selectRecordByRelation" parameterType="Integer" resultMap="result">
-		select a.user_name, a.user_phone, d.door_name, b.record_time
-		from user_info as a,open_record as b ,relation as c, door_info as d
-		where  b.relation_id = c.relation_id AND a.user_id = c.user_id AND d.door_id=c.door_id
-		AND c.door_id=#{doorID}
-	</select>
-
-    <insert id="insertRelation" >
-        insert into relation(user_id, door_id, is_admin)
-        values(#{0}, #{1}, #{2})
+    <insert id="insertRelation" parameterType="relation">
+        insert into relation(user_id, door_id, is_admin) values(#{userID}, #{doorID}, #{isAdmin})
     </insert>
 
-    <select id="findUserIdInRelation" parameterType="Integer" resultType="Relation">
-        select *
-        from relation
-        where door_id=#{doorID}
+    <select id="findReByUDid" resultType="relation">
+        select * from relation where user_id = #{0} and door_id = #{1}
     </select>
 
-    <delete id="deleteRelationByDoorUserId" >
-        delete from relation where user_id = #{0} and door_id=#{1}
+    <delete id="deleteRelation" parameterType="int">
+        delete from relation where door_id = #{doorID}
+    </delete>
+
+    <select id="selectByUid" parameterType="int" resultType="relation">
+        select * from relation where user_id=#{userID}
+    </select>
+
+    <select id="selectByDid" parameterType="int" resultType="relation">
+        select * from relation where door_id=#{doorID}
+    </select>
+
+    <delete id="deleteReByUDid">
+        delete from relation where user_id = #{0} and door_id = #{1}
     </delete>
 
 </mapper>

@@ -19,52 +19,28 @@ import org.springframework.stereotype.Repository;
 public class DoorInfoServiceImpl implements IDoorInfoService {
 
     @Autowired
-    private DoorInfoDAO doorInfoDao;
+    private DoorInfoDAO doorInfoDAO;
 
     @Override
-    public List<DoorInfo> findAll() {
-
-        List<DoorInfo> doorInfoList = new ArrayList<DoorInfo>();
-        doorInfoList = doorInfoDao.findAll();
-        return doorInfoList;
+    public void insertDoorInfo(DoorInfo dInfo) {
+        doorInfoDAO.insertDoorInfo(dInfo);
     }
 
     @Override
-    public DoorInfo finddoorByID(int doorID) {
-
-        DoorInfo door = doorInfoDao.finddoorByID(doorID);
-        return door;
-    }
-
-    @Override
-    public void insertDoorInfo(DoorInfo doorInfo) {
-
-        doorInfoDao.insertDoorInfo(doorInfo);
-    }
-
-    @Override
-    public void deleteByDoorName(String doorName) {
-        doorInfoDao.deleteByDoorName(doorName);
-    }
-
-    @Override
-    public List<DoorInfo> finddoorByName(String name) {
-
-        List<DoorInfo> doorInfo = doorInfoDao.finddoorByName(name);
+    public DoorInfo findByName(String dName) {
+        DoorInfo doorInfo = doorInfoDAO.findByName(dName);
         return doorInfo;
     }
 
     @Override
-    public Integer findDoorId(String doorName) {
-
-        Integer doorId = doorInfoDao.findDoorId(doorName);
-        return doorId;
+    public void deleteDoor(String dName) {
+        doorInfoDAO.deleteDoor(dName);
     }
 
     @Override
-    public Integer idMaxRecord() {
-        Integer maxId = doorInfoDao.idMaxRecord();
-        return maxId;
-    }
+    public DoorInfo selectDoorById(int dId) {
 
+        DoorInfo doorInfo = doorInfoDAO.selectDoorById(dId);
+        return doorInfo;
+    }
 }

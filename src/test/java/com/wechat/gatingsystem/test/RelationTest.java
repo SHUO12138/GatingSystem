@@ -13,20 +13,18 @@ import java.util.List;
 public class RelationTest  extends BaseTest {
     @Autowired
     private RelationDAO relationDAO;
-
-    @Test
-    public void testSelectByRelationID(){
-        List<HashMap<Object,Object>>  map= relationDAO.selectRecordByRelation(1);
-        System.out.println(map);
-    }
-
-    @Test
-    public void testDeleteByDoorName(){
-
-//        List<HashMap<Object,Object>> map= relationDAO.deleteByDoorName("test1");
+//
+//    @Test
+//    public void testSelectByRelationID(){
+//        List<HashMap<Object,Object>>  map= relationDAO.selectRecordByRelation(1);
 //        System.out.println(map);
-    }
-
-
-
+//    }
+//
+//    @Test
+//    public void testDeleteByDoorName(){
+//
+////        List<HashMap<Object,Object>> map= relationDAO.deleteByDoorName("test1");
+////        System.out.println(map);
+//    }
+//
 }

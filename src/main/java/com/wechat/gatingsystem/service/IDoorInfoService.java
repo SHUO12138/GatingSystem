@@ -10,17 +10,12 @@ import com.wechat.gatingsystem.po.DoorInfo;
  */
 public interface IDoorInfoService {
 
-    List<DoorInfo> findAll();
+    void insertDoorInfo(DoorInfo dInfo);
 
-    DoorInfo finddoorByID(int doorID);
+    DoorInfo findByName(String dName);
 
-    void insertDoorInfo(DoorInfo doorInfo);
+    void deleteDoor(String dName);
 
-    void deleteByDoorName(String doorName);
+    DoorInfo selectDoorById(int dId);
 
-    List<DoorInfo> finddoorByName(String name);
-
-    Integer findDoorId(String doorName);
-
-    Integer idMaxRecord();
 }

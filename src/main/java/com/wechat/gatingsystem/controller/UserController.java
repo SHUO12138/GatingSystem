@@ -8,6 +8,8 @@ import com.wechat.gatingsystem.utils.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,92 +23,92 @@ public class UserController {
     @Autowired
     private UserInfoServiceImpl userInfoServiceImpl;
 
-    //http://localhost:8080/gatingsystem/index/findAllUser
-    /**
-     * 前段和服务器交互的时候，出现了500错误
-     * 修改：
-     * 1.去掉了@ResponseBody
-     * 2.去掉了@RequestMapping里边的value=
-     * 3.把userInfoServiceImpl.findAllUser()的返回值改为List<UserInfo>
-     */
-    //查找所有用户的信息
-    @RequestMapping("/findAllUser")
-    public void findAllUser(HttpServletRequest request, HttpServletResponse response) {
+    @RequestMapping("/userRegister")
+    public void userRegister(String uPhone, String uPassword, String uName, String uEmail,
+                             HttpServletRequest request, HttpServletResponse response){
+        UserInfo uInfo = new UserInfo();
+        String json;
+        String resp;
+        //如果用户名存在，返回
+        uInfo = userInfoServiceImpl.findByName(uName);
+        if(uInfo != null){
+            resp = "这个用户名已存在";
+        }else {
+            uInfo = new UserInfo();
+            uInfo.userPhone = uPhone;
+            uInfo.userPassword = uPassword;
+            uInfo.userName = uName;
+            uInfo.userEmail = uEmail;
+            userInfoServiceImpl.insertUserInfo(uInfo);
 
-        List<UserInfo> strMap = userInfoServiceImpl.findAllUser();
-        String json = JSON.toJSONString(strMap);
-        JsonUtils.writeJson(json, request, response);
-    }
+            uInfo = userInfoServiceImpl.judgePassword(uName, uPassword);
 
-    //通过用户手机查找用户
-    @RequestMapping("/findUserByPhone")
-    public void findUserByPhone(String userPhone, HttpServletRequest request, HttpServletResponse response){
-
-        List<UserInfo> user = userInfoServiceImpl.findUserInfoByPhone(userPhone);
-        //json == null json: []
-        String json = JSON.toJSONString(user);
-        //用户不存在
-        if(json.length() <= 2){
-            json = "0";
+            if (uInfo != null) {
+                resp = "1";
+            } else {
+                resp = "0";
+            }
         }
-        //用户已经存在
-        else{
-            json = "1";
+        json = JSON.toJSONString(resp);
+        JsonUtils.writeJson(json, request, response);
+    }
+
+    @RequestMapping("/judgePassword")
+    public void judgePassword(String uName, String uPas,
+                              HttpServletRequest request, HttpServletResponse response){
+
+        UserInfo uInfo = userInfoServiceImpl.judgePassword(uName, uPas);
+
+        Integer resp;
+        if(uInfo != null){
+            resp = 1;
+        }else{
+            resp = 0;
+        }
+        String json = JSON.toJSONString(resp);
+        JsonUtils.writeJson(json, request, response);
+    }
+
+    @RequestMapping("/updateUInfo")
+    public void updateUInfo(String uName, String uPhone, String uEmail,
+                            HttpServletRequest request, HttpServletResponse response){
+
+        //更新
+        UserInfo uInfo = new UserInfo();
+        uInfo.userName = uName;
+        uInfo.userPhone = uPhone;
+        uInfo.userEmail = uEmail;
+        userInfoServiceImpl.updateUserInfo(uInfo);
+
+        //查询
+        uInfo = new UserInfo();
+        uInfo = userInfoServiceImpl.findByName(uName);
+        String resp;
+        if(uInfo.userPhone.equals(uPhone)){
+            resp = "更新成功！";
+        }else{
+            resp = "更新失败";
+        }
+        String json = JSON.toJSONString(resp);
+        JsonUtils.writeJson(json, request, response);
+    }
+
+    @RequestMapping("/showUserInfo")
+    public void showUserInfo(String uName,
+                             HttpServletRequest request, HttpServletResponse response){
+
+        List<UserInfo> uInfoList = new ArrayList<UserInfo>();
+        UserInfo uInfo = userInfoServiceImpl.findByName(uName);
+        uInfoList.add(uInfo);
+        String resp = "";
+        String json;
+        if(uInfo != null){
+            json = JSON.toJSONString(uInfoList);
+            //json = JSON.toJSONString(uInfo.toString());
+        }else {
+            resp = "error";
+            json = JSON.toJSONString(resp);
         }
         JsonUtils.writeJson(json, request, response);
     }
-
-    @RequestMapping("/showUserByPhone")
-    public void showUserByPhone(String userPhone, HttpServletRequest request, HttpServletResponse response){
-
-        List<UserInfo> user = userInfoServiceImpl.showUserByPhone(userPhone);
-        String json = JSON.toJSONString(user);
-        JsonUtils.writeJson(json, request, response);
-    }
-
-    //增加用户，这个时候只是增加了用户的手机号
-    @RequestMapping("/insertUser")
-    public void insertUser(String userPhone) {
-
-        UserInfo userInfo = new UserInfo();
-        userInfo.setUserPhone(userPhone);
-        userInfo.userPhone = userInfo.getUserPhone();
-
-        userInfoServiceImpl.insertUserInfo(userInfo);
-
-    }
-
-    @RequestMapping("/insertDoorUser")
-    public void insertDoorUser(String userPhone, String userName, String userInfo) {
-
-        UserInfo user = new UserInfo();
-
-        user.setUserPhone(userPhone);
-        user.userPhone = user.getUserPhone();
-        user.setUserName(userName);
-        user.userName = user.getUserName();
-        user.setUserMoreInfo(userInfo);
-        user.userMoreInfo = user.getUserMoreInfo();
-
-        userInfoServiceImpl.insertUserInfo(user);
-
-    }
-
-    //更新用户，增加手机号之外的信息
-    //http://localhost:8080/gatingsystem/index/updateUser
-    @RequestMapping("/updateUser")
-    public void updateUser(String userPhone, String userName, String userInfo) {
-
-        UserInfo user = new UserInfo();
-        user.setUserName(userName);
-        user.setUserMoreInfo(userInfo);
-        user.setUserPhone(userPhone);
-        user.userPhone = user.getUserPhone();
-        user.userName = user.getUserName();
-        user.userMoreInfo = user.getUserMoreInfo();
-
-        userInfoServiceImpl.updateUser(user);
-
-    }
-
 }

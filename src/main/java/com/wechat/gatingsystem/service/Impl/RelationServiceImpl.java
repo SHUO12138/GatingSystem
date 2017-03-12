@@ -22,33 +22,36 @@ public class RelationServiceImpl implements IRelationService{
     private RelationDAO relationDao;
 
     @Override
-    public Relation selectByRelationID(int relationID) {
+    public void insertRelation(Relation relation) {
+        relationDao.insertRelation(relation);
+    }
 
-        Relation relation = relationDao.selectByRelationID(relationID);
+    @Override
+    public Relation findReByUDid(int uId, int dId) {
+
+        Relation relation = relationDao.findReByUDid(uId, dId);
         return relation;
     }
 
     @Override
-    public List<HashMap<Object, Object>> selectRecordByRelation(Integer doorId) {
-
-        List<HashMap<Object, Object>> listMap = relationDao.selectRecordByRelation(doorId);
-        return listMap;
+    public void deleteRelation(int dId) {
+        relationDao.deleteRelation(dId);
     }
 
     @Override
-    public void insertRelation(Integer userID, Integer doorID, Integer isAdmin) {
-        relationDao.insertRelation(userID, doorID, isAdmin);
+    public List<Relation> selectByUid(int uId) {
+        List<Relation> relationList = relationDao.selectByUid(uId);
+        return relationList;
     }
 
     @Override
-    public List<Relation> findUserIdInRelation(Integer doorId) {
-        List<Relation> list = relationDao.findUserIdInRelation(doorId);
-        return list;
+    public List<Relation> selectByDid(int dId) {
+        List<Relation> relationList = relationDao.selectByDid(dId);
+        return relationList;
     }
 
     @Override
-    public void deleteRelationByDoorUserId(Integer userId, Integer doorId) {
-        relationDao.deleteRelationByDoorUserId(userId, doorId);
+    public void deleteReByUDid(int uId, int dId) {
+        relationDao.deleteReByUDid(uId, dId);
     }
-
 }

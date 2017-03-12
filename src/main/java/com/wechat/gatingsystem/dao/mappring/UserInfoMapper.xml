@@ -5,26 +5,6 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wechat.gatingsystem.dao.UserInfoDAO">
 
-    <!-- mybatis 映射文件 相当于DAO的实现 每一个id相当于一个方法 -->
-    <select id="findAllUser" resultType="java.util.HashMap">
-		select * from user_info
-	</select>
-
-    <select id="findUserId" parameterType="String" resultType="Integer">
-        select user_id
-        from user_info
-        where user_phone = #{userPhone}
-    </select>
-
-    <insert id="insertUserInfo" parameterType="userInfo">
-		insert into user_info(user_name, user_phone, user_more_info)
-		values (#{userName}, #{userPhone}, #{userMoreInfo})
-	</insert>
-
-    <delete id="deleteUserInfoByPhone" parameterType="String">
-		delete from user_info where user_phone = #{userPhone}
-	</delete>
-
     <resultMap id="result" type="java.util.HashMap">
 
         <!--这里设置id属性，会影响输出 -->
@@ -48,27 +28,25 @@
 		where a.user_id=b.user_id AND b.door_id=c.door_id AND user_phone=#{userPhone}
 	</select>
 
-    <update id="updateUser" parameterType="userInfo">
-        update user_info
-        set user_name=#{userName}, user_more_info=#{userMoreInfo}
-        where user_phone=#{userPhone}
-	</update>
-
-    <select id="findUserInfoByPhone" parameterType="String" resultType="java.util.HashMap">
-        select *
-        from user_info
-        where user_phone=#{userPhone}
+    <select id="findByName" parameterType="String" resultType="userInfo">
+        select * from user_info where user_name=#{userName}
     </select>
 
-    <select id="findUserInfoById" parameterType="Integer" resultType="UserInfo">
-        select *
-        from user_info
-        where user_id=#{userID}
+    <insert id="insertUserInfo" parameterType="userInfo">
+        insert into user_info(user_phone, user_password, user_name, user_email)
+        values(#{userPhone}, #{userPassword}, #{userName}, #{userEmail})
+    </insert>
+
+    <!--考虑怎么传多个参数-->
+    <select id="judgePassword" resultType="userInfo">
+        select * from user_info where user_name=#{0} and user_password = #{1}
     </select>
 
-    <select id="idMaxRecord" resultType="Integer">
-        select max(user_id)
-        from user_info
-    </select>
+    <update id="updateUserInfo" parameterType="userInfo">
+        update user_info set user_phone = #{userPhone}, user_email = #{userEmail} where user_name = #{userName};
+    </update>
 
+    <select id="findById" parameterType="int" resultType="userInfo">
+        select * from user_info where user_id = #{userID}
+    </select>
 </mapper>

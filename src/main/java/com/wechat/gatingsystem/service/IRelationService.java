@@ -11,13 +11,15 @@ import java.util.List;
  */
 public interface IRelationService {
 
-    Relation selectByRelationID(int relationID);
+    void insertRelation(Relation relation);
 
-    List<HashMap<Object, Object>> selectRecordByRelation(Integer doorId);
+    Relation findReByUDid(int uId, int dId);
 
-    void insertRelation(Integer userID, Integer doorID, Integer isAdmin);
+    void deleteRelation(int dId);
 
-    List<Relation> findUserIdInRelation(Integer doorId);
+    List<Relation> selectByUid(int uId);
 
-    void deleteRelationByDoorUserId(Integer userId, Integer doorId);
+    List<Relation> selectByDid(int dId);
+
+    void deleteReByUDid(int uId, int dId);
 }

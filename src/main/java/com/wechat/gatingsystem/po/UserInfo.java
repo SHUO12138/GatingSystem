@@ -8,7 +8,9 @@ public class UserInfo {
     public int userID;
     public String userName;
     public String userPhone;
-    public String userMoreInfo;
+    public String userEmail;
+    public String userPassword;
+
 
     public int getUserID() {
         return userID;
@@ -34,11 +36,19 @@ public class UserInfo {
         this.userPhone = userPhone;
     }
 
-    public String getUserMoreInfo() {
-        return userMoreInfo;
+    public String getUserEmail() {
+        return userEmail;
     }
 
-    public void setUserMoreInfo(String userMoreInfo) {
-        this.userMoreInfo = userMoreInfo;
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 }

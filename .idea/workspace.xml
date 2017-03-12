@@ -2,31 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83e31ba3-cf7b-4df0-bce5-fe7b5650b432" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/OpenDoorController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/ServerThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem.war" afterPath="$PROJECT_DIR$/target/GatingSystem.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/DoorInfoDAO.class" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/DoorInfoDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/OpenRecordDAO.class" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/OpenRecordDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/RelationDAO.class" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/RelationDAO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/UserInfoDAO.class" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/UserInfoDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/po/OpenRecord.class" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/po/OpenRecord.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/po/UserInfo.class" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/po/UserInfo.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/service/IDoorInfoService.class" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/service/IDoorInfoService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/service/IOpenRecordService.class" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/service/IOpenRecordService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/service/IRelationService.class" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/service/IRelationService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/service/IUserInfoService.class" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/service/IUserInfoService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/service/Impl/DoorInfoServiceImpl.class" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/service/Impl/DoorInfoServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/service/Impl/OpenRecordServiceImpl.class" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/service/Impl/OpenRecordServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/service/Impl/RelationServiceImpl.class" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/service/Impl/RelationServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/service/Impl/UserInfoServiceImpl.class" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/service/Impl/UserInfoServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/dao/DoorInfoDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/dao/DoorInfoDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/dao/OpenRecordDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/dao/OpenRecordDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/dao/RelationDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/dao/RelationDAO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/dao/UserInfoDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/dao/UserInfoDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/po/OpenRecord.class" afterPath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/po/OpenRecord.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/po/UserInfo.class" afterPath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/po/UserInfo.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/service/IDoorInfoService.class" afterPath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/service/IDoorInfoService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/service/IOpenRecordService.class" afterPath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/service/IOpenRecordService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/service/IRelationService.class" afterPath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/service/IRelationService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/service/IUserInfoService.class" afterPath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/service/IUserInfoService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/service/Impl/DoorInfoServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/service/Impl/DoorInfoServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/service/Impl/OpenRecordServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/service/Impl/OpenRecordServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/service/Impl/RelationServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/service/Impl/RelationServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/service/Impl/UserInfoServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/service/Impl/UserInfoServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/wechat/gatingsystem/test/BaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/wechat/gatingsystem/test/BaseTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/wechat/gatingsystem/test/DoorInfoDaoTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/wechat/gatingsystem/test/DoorInfoDaoTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/ssm.log" afterPath="$PROJECT_DIR$/logs/ssm.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/DoorController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/DoorController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/RelationController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/RelationController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/UserController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/DoorInfoDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/DoorInfoDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/OpenRecordDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/OpenRecordDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/RelationDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/RelationDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/UserInfoDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/UserInfoDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/DoorInfoMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/DoorInfoMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/OpenRecordMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/OpenRecordMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/RelationMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/RelationMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/UserInfoMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/UserInfoMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/po/OpenRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/po/OpenRecord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/po/UserInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/po/UserInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IDoorInfoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IDoorInfoService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IOpenRecordService.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IOpenRecordService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IRelationService.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IRelationService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IUserInfoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IUserInfoService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/DoorInfoServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/DoorInfoServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/OpenRecordServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/OpenRecordServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/RelationServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/RelationServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/UserInfoServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/UserInfoServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/BaseTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/BaseTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/DoorInfoDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/DoorInfoDaoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/RelationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/RelationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/UserTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/UserTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/DoorInfoMapper.xml" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/DoorInfoMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/OpenRecordMapper.xml" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/OpenRecordMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/RelationMapper.xml" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/RelationMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/UserInfoMapper.xml" afterPath="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/UserInfoMapper.xml" />
     </list>
     <ignored path="GatingSystem.iws" />
@@ -53,44 +94,6 @@
     <option name="SORT_POSITIONED" value="false" />
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - opend_door_app@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - opend_door_app@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="relation" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - opend_door_app@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="open_record" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -98,64 +101,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DoorInfoServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/DoorInfoServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DoorInfoDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/DoorInfoDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DoorInfoMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/DoorInfoMapper.xml">
+      <file leaf-file-name="OpenDoorController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/OpenDoorController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
-              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+              <caret line="89" column="15" selection-start-line="89" selection-start-column="15" selection-end-line="89" selection-end-column="15" />
               <folding>
-                <marker date="1474104179785" expanded="true" signature="325:348" placeholder="select * fro... door_info" />
-                <marker date="1474104179785" expanded="true" signature="436:500" placeholder="select * fro... door_info" />
-                <marker date="1474104179785" expanded="true" signature="436:511" placeholder="select door_... door_info" />
-                <marker date="1474104179785" expanded="true" signature="619:672" placeholder="select * fro... door_info" />
-                <marker date="1474104179785" expanded="true" signature="748:904" placeholder="insert into door_info... " />
-                <marker date="1474104179785" expanded="true" signature="1239:1281" placeholder="select max(d... door_info" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DoorInfoMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/DoorInfoMapper.xml">
+      <file leaf-file-name="ServerThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/ServerThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <marker date="1474104190738" expanded="true" signature="307:330" placeholder="select * fro... door_info" />
-                <marker date="1474104190738" expanded="true" signature="415:490" placeholder="select door_... door_info" />
-                <marker date="1474104190738" expanded="true" signature="589:642" placeholder="select * fro... door_info" />
-                <marker date="1474104190738" expanded="true" signature="712:868" placeholder="insert into door_info... " />
-                <marker date="1474104190738" expanded="true" signature="1171:1207" placeholder="select max(d... door_info" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IDoorInfoService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IDoorInfoService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state relative-caret-position="332">
+              <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -184,57 +146,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/DoorMapper.xml" />
-        <option value="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/dao/mappring/DoorMapper.xml" />
-        <option value="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/DoorMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/sys.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/po/DoorInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/po/Relation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/po/OpenRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/RecordTimeDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/OpenRecordDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IOpenRecordService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/OpenDoorServiceImpl.java" />
         <option value="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/dao/mappring/OpenRecordMapper.xml" />
         <option value="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/OpenRecordMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/hello.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hello.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hello.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/OpenRecordServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/DoorInfoController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/OpenRecordMapper.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/DeleteDoorTeest.java" />
         <option value="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/dao/mappring/RelationMapper.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/RelationTest.java" />
         <option value="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/dao/mappring/DoorInfoMapper.xml" />
         <option value="$PROJECT_DIR$/target/classes/com/wechat/gatingsystem/dao/mappring/UserInfoMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext-mvc.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/DoorInfoDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext-mybatis.xml" />
         <option value="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/applicationContext-mybatis.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/UserTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/DoorController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/po/UserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/utils/JsonUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/RelationMapper.xml" />
         <option value="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/RelationMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/RelationDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IRelationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/RelationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/UserController.java" />
         <option value="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/DoorInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/UserInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/po/UserInfo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/UserTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/DoorInfoDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/RelationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/DoorInfoMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/DoorInfoDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IDoorInfoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/DoorInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/UserInfoMapper.xml" />
-        <option value="$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/UserInfoMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/UserInfoDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IUserInfoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/UserInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/RelationDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IRelationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/RelationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/RelationMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/RelationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/DoorInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/OpenDoor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/DoorController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/po/OpenRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/OpenRecordMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/OpenRecordDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IOpenRecordService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/OpenRecordServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/ServiceConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/ServerThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/OpenDoorController.java" />
       </list>
     </option>
   </component>
@@ -245,9 +207,9 @@
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
-    <option name="FILTER_WARNINGS" value="true" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
@@ -291,10 +253,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-      </pane>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -323,137 +281,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GatingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GatingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GatingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GatingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GatingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GatingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GatingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GatingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GatingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GatingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GatingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GatingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gatingsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GatingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GatingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GatingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -468,6 +296,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GatingSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GatingSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -487,6 +341,10 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Problems" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -495,7 +353,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.28225806" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaOO" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
@@ -505,12 +363,15 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.wechat.gatingsystem.service" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wechat.gatingsystem.controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\JavaProject\GatingSystem" />
       <recent name="D:\project\JavaProject\GatingSystem\libs" />
       <recent name="D:\project\GaingSystem\target\GatingSystem\WEB-INF\classes\com\wechat\gatingsystem\dao\mappring" />
       <recent name="D:\project\GaingSystem\target\classes\com\wechat\gatingsystem\dao\mappring" />
       <recent name="D:\project\GaingSystem\src\main\java\com\wechat\gatingsystem\dao\mappring" />
-      <recent name="D:\project\GatingSystem\target\GatingSystem\WEB-INF\classes\com\wechat\gatingsystem\dao\mappring" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.gatingsystem">
@@ -566,32 +427,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="UserTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.wechat.gatingsystem.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="GatingSystem" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.wechat.gatingsystem.test" />
-      <option name="MAIN_CLASS_NAME" value="com.wechat.gatingsystem.test.UserTest" />
-      <option name="METHOD_NAME" value="update" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="DoorInfoDaoTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -631,6 +466,32 @@
       <option name="PACKAGE_NAME" value="com.wechat.gatingsystem.test" />
       <option name="MAIN_CLASS_NAME" value="com.wechat.gatingsystem.test.BaseTest" />
       <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="UserTest.findByPhone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.wechat.gatingsystem.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="GatingSystem" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.wechat.gatingsystem.test" />
+      <option name="MAIN_CLASS_NAME" value="com.wechat.gatingsystem.test.UserTest" />
+      <option name="METHOD_NAME" value="findByPhone" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1176,17 +1037,17 @@
       <item index="2" class="java.lang.String" itemvalue="Tomcat Server.gatingsystem" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.UserTest.selectRelaByUPhone" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.UserTest.selectAllUser" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.UserTest.update" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.DoorInfoDaoTest.test" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.BaseTest.test" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.DoorInfoDaoTest.test" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.BaseTest.test" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.UserTest.findByPhone" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BaseTest.test" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserTest.selectRelaByUPhone" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UserTest.selectAllUser" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.DoorInfoDaoTest.test" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.UserTest.update" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UserTest.findByPhone" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BaseTest.test" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UserTest.selectRelaByUPhone" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserTest.selectAllUser" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.DoorInfoDaoTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -1278,16 +1139,60 @@
       <workItem from="1475486669814" duration="1294000" />
       <workItem from="1475501198743" duration="833000" />
       <workItem from="1475759465734" duration="156000" />
+      <workItem from="1475761096622" duration="14000" />
+      <workItem from="1476181748633" duration="648000" />
+      <workItem from="1476276478978" duration="96000" />
+      <workItem from="1476439400485" duration="812000" />
+      <workItem from="1476455053023" duration="660000" />
+      <workItem from="1476524977968" duration="46000" />
+      <workItem from="1476525962501" duration="19000" />
+      <workItem from="1477807263977" duration="6723000" />
+      <workItem from="1478166101076" duration="7618000" />
+      <workItem from="1478221499506" duration="2600000" />
+      <workItem from="1478249508667" duration="1228000" />
+      <workItem from="1478314750008" duration="5317000" />
+      <workItem from="1478398158180" duration="13557000" />
+      <workItem from="1478603449459" duration="3682000" />
+      <workItem from="1478615231758" duration="761000" />
+      <workItem from="1478689168426" duration="4603000" />
+      <workItem from="1478757810484" duration="14775000" />
+      <workItem from="1478917764938" duration="910000" />
+      <workItem from="1478947558975" duration="827000" />
+      <workItem from="1478954696871" duration="480000" />
+      <workItem from="1478997759109" duration="149000" />
+      <workItem from="1479126919350" duration="1081000" />
+      <workItem from="1479192973153" duration="3585000" />
+      <workItem from="1479222444114" duration="517000" />
+      <workItem from="1479262004081" duration="1198000" />
+      <workItem from="1479350290312" duration="54000" />
+      <workItem from="1479351420403" duration="36000" />
+      <workItem from="1479352556498" duration="1306000" />
+      <workItem from="1479471255737" duration="35000" />
+      <workItem from="1479718588477" duration="309000" />
+      <workItem from="1484138079162" duration="769000" />
+      <workItem from="1484200450862" duration="2296000" />
+      <workItem from="1484360718323" duration="369000" />
+      <workItem from="1484457508534" duration="1722000" />
+      <workItem from="1486986803997" duration="865000" />
+      <workItem from="1487048004868" duration="2967000" />
+      <workItem from="1487058315381" duration="98000" />
+      <workItem from="1487058803485" duration="2318000" />
+      <workItem from="1487121103427" duration="4423000" />
+      <workItem from="1487334056289" duration="4373000" />
+      <workItem from="1487466439206" duration="8142000" />
+      <workItem from="1487576073654" duration="6994000" />
+      <workItem from="1487593709469" duration="47000" />
+      <workItem from="1487658267060" duration="3463000" />
+      <workItem from="1487818500669" duration="3005000" />
+      <workItem from="1487903643093" duration="1195000" />
+      <workItem from="1488092193752" duration="1353000" />
+      <workItem from="1488274639543" duration="1271000" />
+      <workItem from="1488364890789" duration="640000" />
+      <workItem from="1488780775539" duration="5218000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BaseTest_test - 2016.09.01 at 17h 09m 34s.xml">
-      <configuration name="BaseTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BaseTest_test - 2016.09.01 at 17h 14m 38s.xml">
-      <configuration name="BaseTest.test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BaseTest_test - 2016.09.01 at 17h 23m 00s.xml">
       <configuration name="BaseTest.test" configurationId="JUnit" />
     </history-entry>
@@ -1299,6 +1204,12 @@
     </history-entry>
     <history-entry file="DoorInfoDaoTest_test - 2016.09.01 at 16h 04m 50s.xml">
       <configuration name="DoorInfoDaoTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest_findByPhone - 2016.10.30 at 15h 30m 54s.xml">
+      <configuration name="UserTest.findByPhone" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest_findByPhone - 2016.10.30 at 15h 32m 19s.xml">
+      <configuration name="UserTest.findByPhone" configurationId="JUnit" />
     </history-entry>
     <history-entry file="UserTest_selectAllUser - 2016.09.01 at 16h 09m 36s.xml">
       <configuration name="UserTest.selectAllUser" configurationId="JUnit" />
@@ -1314,7 +1225,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280657000" />
+    <option name="totallyTimeSpent" value="405831000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1330,36 +1241,36 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64484453" sideWeight="0.50682855" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39485627" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1709531" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17019667" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44517186" sideWeight="0.49546143" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31423897" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4729951" sideWeight="0.49317148" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23676248" sideWeight="0.4903581" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2375189" sideWeight="0.5096419" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4893617" sideWeight="0.49546143" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31587562" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.89198035" sideWeight="0.49317148" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1379,14 +1290,13 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="87" />
+      <option name="time" value="121" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
-        <watch expression="isAd" language="JAVA" custom="" />
-        <watch expression="doorId" language="JAVA" custom="" />
-        <watch expression="userId" language="JAVA" custom="" />
-        <watch expression="integerMap" language="JAVA" custom="" />
+        <watch expression="uPas" language="JAVA" custom="" />
+        <watch expression="uName" language="JAVA" custom="" />
+        <watch expression="dName" language="JAVA" custom="" />
       </configuration>
     </watches-manager>
   </component>
@@ -1395,209 +1305,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/DoorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1250">
-          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/UserInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="68" column="27" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/UserInfoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/UserInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1675">
-          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/DoorInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/DoorInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="800">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="35" selection-end-column="13" />
-          <folding>
-            <marker date="1474104179785" expanded="true" signature="325:348" placeholder="select * fro... door_info" />
-            <marker date="1474104179785" expanded="true" signature="436:500" placeholder="select * fro... door_info" />
-            <marker date="1474104179785" expanded="true" signature="436:511" placeholder="select door_... door_info" />
-            <marker date="1474104179785" expanded="true" signature="619:672" placeholder="select * fro... door_info" />
-            <marker date="1474104179785" expanded="true" signature="748:904" placeholder="insert into door_info... " />
-            <marker date="1474104179785" expanded="true" signature="1239:1281" placeholder="select max(d... door_info" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/RelationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/UserInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1825">
-          <caret line="82" column="30" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IUserInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/DoorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1250">
-          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/UserInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="68" column="27" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/UserInfoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/UserInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1675">
-          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/DoorInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/DoorInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="35" selection-end-column="13" />
-          <folding>
-            <marker date="1474104179785" expanded="true" signature="325:348" placeholder="select * fro... door_info" />
-            <marker date="1474104179785" expanded="true" signature="436:500" placeholder="select * fro... door_info" />
-            <marker date="1474104179785" expanded="true" signature="436:511" placeholder="select door_... door_info" />
-            <marker date="1474104179785" expanded="true" signature="619:672" placeholder="select * fro... door_info" />
-            <marker date="1474104179785" expanded="true" signature="748:904" placeholder="insert into door_info... " />
-            <marker date="1474104179785" expanded="true" signature="1239:1281" placeholder="select max(d... door_info" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/RelationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/UserInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1825">
-          <caret line="82" column="30" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IUserInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/DoorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1250">
-          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/UserInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="68" column="27" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/UserInfoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/UserInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1675">
-          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/DoorInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/DoorInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="35" selection-end-column="13" />
-          <folding>
-            <marker date="1474104179785" expanded="true" signature="325:348" placeholder="select * fro... door_info" />
-            <marker date="1474104179785" expanded="true" signature="436:500" placeholder="select * fro... door_info" />
-            <marker date="1474104179785" expanded="true" signature="436:511" placeholder="select door_... door_info" />
-            <marker date="1474104179785" expanded="true" signature="619:672" placeholder="select * fro... door_info" />
-            <marker date="1474104179785" expanded="true" signature="748:904" placeholder="insert into door_info... " />
-            <marker date="1474104179785" expanded="true" signature="1239:1281" placeholder="select max(d... door_info" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1668,49 +1379,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="800">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="35" selection-end-column="13" />
-          <folding>
-            <marker date="1474104179785" expanded="true" signature="325:348" placeholder="select * fro... door_info" />
-            <marker date="1474104179785" expanded="true" signature="436:500" placeholder="select * fro... door_info" />
-            <marker date="1474104179785" expanded="true" signature="436:511" placeholder="select door_... door_info" />
-            <marker date="1474104179785" expanded="true" signature="619:672" placeholder="select * fro... door_info" />
-            <marker date="1474104179785" expanded="true" signature="748:904" placeholder="insert into door_info... " />
-            <marker date="1474104179785" expanded="true" signature="1239:1281" placeholder="select max(d... door_info" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/RelationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="130" column="24" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/UserInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1825">
-          <caret line="82" column="30" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IUserInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/UserInfoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1721,84 +1389,277 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/utils/JsonUtils.java">
+    <entry file="file://$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/DoorInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/UserInfoMapper.xml">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="68" column="27" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="27" />
+        <state relative-caret-position="4825">
+          <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/RelationMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-common.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/DoorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="-329">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/po/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/DoorInfoDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/po/DoorInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wechat/gatingsystem/test/RelationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.0.2.RELEASE/spring-web-4.0.2.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4775">
+          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IDoorInfoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="375">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/DoorInfoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="750">
+          <caret line="42" column="25" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/po/Relation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/DoorInfoDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="375">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IUserInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/UserInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1175">
+          <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/UserInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="48" column="24" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IRelationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/RelationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1025">
+          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/RelationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/utils/JsonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1150">
+          <caret line="59" column="72" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/UserInfoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/RelationDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="33" column="42" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/DoorInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding>
-            <marker date="1474104179785" expanded="true" signature="325:348" placeholder="select * fro... door_info" />
-            <marker date="1474104179785" expanded="true" signature="436:500" placeholder="select * fro... door_info" />
-            <marker date="1474104179785" expanded="true" signature="436:511" placeholder="select door_... door_info" />
-            <marker date="1474104179785" expanded="true" signature="619:672" placeholder="select * fro... door_info" />
-            <marker date="1474104179785" expanded="true" signature="748:904" placeholder="insert into door_info... " />
-            <marker date="1474104179785" expanded="true" signature="1239:1281" placeholder="select max(d... door_info" />
-          </folding>
+        <state relative-caret-position="48">
+          <caret line="9" column="88" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="88" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/GatingSystem/WEB-INF/classes/com/wechat/gatingsystem/dao/mappring/DoorInfoMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/RelationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="175">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/mappring/OpenRecordMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/dao/OpenRecordDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/IOpenRecordService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/service/Impl/OpenRecordServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/po/OpenRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/DoorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/ServiceConnection.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="84" selection-start-line="12" selection-start-column="8" selection-end-line="15" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-mybatis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/ServerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wechat/gatingsystem/controller/OpenDoorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="89" column="15" selection-start-line="89" selection-start-column="15" selection-end-line="89" selection-end-column="15" />
           <folding>
-            <marker date="1474104190738" expanded="true" signature="307:330" placeholder="select * fro... door_info" />
-            <marker date="1474104190738" expanded="true" signature="415:490" placeholder="select door_... door_info" />
-            <marker date="1474104190738" expanded="true" signature="589:642" placeholder="select * fro... door_info" />
-            <marker date="1474104190738" expanded="true" signature="712:868" placeholder="insert into door_info... " />
-            <marker date="1474104190738" expanded="true" signature="1171:1207" placeholder="select max(d... door_info" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
