@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wechat.gatingsystem.dao.DoorInfoDAO">
+    <!-- mybatis 映射文件 相当于DAO的实现 每一个id相当于一个方法 -->
+
+    <insert id="insertDoorInfo" parameterType="doorInfo">
+        insert into door_info(door_name, door_create_time, door_location, door_more_info)
+        values(#{doorName}, #{doorCreateTime}, #{doorLocation}, #{doorMoreInfo})
+    </insert>
+
+    <select id="findByName" parameterType="String" resultType="doorInfo">
+        select * from door_info where door_name = #{doorName}
+    </select>
+
+    <delete id="deleteDoor" parameterType="String">
+        delete  from door_info where door_name=#{doorName}
+    </delete>
+
+    <select id="selectDoorById" parameterType="int" resultType="doorInfo">
+        select * from door_info where door_id = #{doorID}
+    </select>
+</mapper>
